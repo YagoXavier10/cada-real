@@ -1,0 +1,50 @@
+name: Gerar áudios da leitura
+
+# Quando uma página ou as notícias mudam, gera com voz neural os áudios dos textos novos e apaga os que saíram.
+# Também pode ser rodado à mão na aba Actions ("Run workflow").
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "dados/noticias.json"
+      - "scripts/gerar_audios.py"
+  workflow_run:
+    workflows: ["Atualizar notícias"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audios
+  cancel-in-progress: false
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Gerar áudios
+        run: |
+          pip install edge-tts
+          python scripts/gerar_audios.py
+
+      - name: Publicar se houver mudança
+        run: |
+          git add -A assets/audio/leitura
+          if git diff --cached --quiet; then
+            echo "Nenhum áudio novo."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: atualiza os áudios da leitura"
+          git push

@@ -93,7 +93,9 @@ no site de cada veículo.
 
 - HTML5, CSS3 e JavaScript puros. Sem frameworks, sem dependências, sem build.
 - Uma folha de estilo, [`css/estilo.css`](css/estilo.css), mobile-first, com a paleta em variáveis no `:root`.
-- JavaScript para o menu do celular, a leitura por áudio ao passar o mouse, o carrossel, os
+- JavaScript para o menu do celular, a leitura por áudio ao passar o mouse (com áudios em voz
+  neural gerados por [`scripts/gerar_audios.py`](scripts/gerar_audios.py) e, para o texto que muda na
+  hora, a voz mais natural do navegador), o carrossel, os
   simuladores, as notícias e a animação das barras. Sem JavaScript, o conteúdo continua acessível.
 - Nenhum dado digitado nos simuladores sai do navegador. Sem cookies e sem rastreadores.
 
