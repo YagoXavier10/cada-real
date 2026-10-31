@@ -64,6 +64,18 @@ strong { color: var(--azul-escuro); }
 
 .contem { width: 100%; max-width: var(--largura); margin: 0 auto; padding: 0 16px; }
 
+/* ---------- Leitura por áudio ao passar o mouse ---------- */
+.leitura-hover__botao {
+  position: fixed; right: 16px; bottom: 16px; z-index: 60;
+  max-width: calc(100vw - 32px); padding: 10px 16px;
+  border: 2px solid var(--azul-claro); border-radius: 999px;
+  background: var(--azul-escuro); color: var(--branco);
+  box-shadow: var(--sombra); font: inherit; font-weight: 700;
+  cursor: pointer;
+}
+.leitura-hover__botao:hover { background: var(--azul-medio); }
+.leitura-hover__botao:disabled { cursor: not-allowed; opacity: .9; }
+
 /* ---------- Cabeçalho ---------- */
 .topo {
   position: sticky; top: 0; z-index: 50;
@@ -474,7 +486,7 @@ tbody tr:hover { background: var(--azul-suave); }
 }
 
 @media print {
-  .topo, .rodape, .heroi__acoes, .pular { display: none; }
+  .topo, .rodape, .heroi__acoes, .pular, .leitura-hover__botao { display: none; }
   .heroi, .pagina-topo, .secao--escura { background: none; color: var(--texto); }
   .heroi h1, .pagina-topo h1 { color: var(--azul-escuro); }
 }
