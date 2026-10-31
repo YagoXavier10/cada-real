@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="sem-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cada Real — educação financeira para quem vive com pouco</title>
+    <meta name="description" content="Pequenos gastos viram grandes valores. Simule, entenda e organize o seu dinheiro, mesmo ganhando pouco.">
+    <meta name="theme-color" content="#003B5C">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/simuladores.js" defer></script>
+</head>
+
+<body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topo">
+        <div class="contem topo__barra">
+            <a class="marca" href="index.html">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <circle class="marca__moeda" cx="16" cy="16" r="15" />
+                    <path class="marca__cifra" d="M17.6 7v2.1c2 .3 3.4 1.4 3.9 3.2l-2.6.9c-.3-1-1.2-1.6-2.6-1.6-1.4 0-2.2.6-2.2 1.4 0 .9.8 1.2 2.9 1.7 2.8.6 4.6 1.6 4.6 4.2 0 2-1.5 3.4-4 3.8V25h-2.3v-2.3c-2.3-.3-3.9-1.6-4.4-3.6l2.7-.8c.3 1.2 1.4 2 3 2 1.6 0 2.4-.6 2.4-1.5 0-.9-.7-1.3-3-1.8-2.6-.6-4.4-1.5-4.4-4 0-1.9 1.4-3.3 3.7-3.7V7h2.3Z" /></svg>
+                Cada Real
+            </a>
+            <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <path d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+                Menu
+            </button>
+            <nav class="menu" id="menu-principal" aria-label="Principal">
+                <ul>
+                        <li><a href="index.html" aria-current="page">Início</a></li>
+                        <li><a href="guia.html">Guia</a></li>
+                        <li><a href="simuladores.html">Simuladores</a></li>
+                        <li><a href="dados.html">Dados</a></li>
+                        <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <section class="heroi" aria-labelledby="titulo-pagina">
+            <div class="contem heroi__grade">
+                <div class="heroi__texto">
+                    <span class="sobretitulo">Educação financeira sem complicação</span>
+                    <h1 id="titulo-pagina">Quem ganha pouco <span>não pode perder nada.</span></h1>
+                    <p>Um café por dia, uma assinatura esquecida, a fatura paga pela metade. Sozinhos parecem
+                        nada — somados, levam o que faltava para fechar o mês. Aqui você descobre para onde vai
+                        cada real e como trazer ele de volta.</p>
+                    <div class="heroi__acoes">
+                        <a class="botao botao--cheio" href="guia.html">Ler o guia</a>
+                        <a class="botao botao--vazado" href="simuladores.html">Ver todos os simuladores</a>
+                    </div>
+                </div>
+
+                <form class="simulador" id="sim-gasto" aria-labelledby="sim-gasto-titulo" novalidate>
+                    <h2 id="sim-gasto-titulo">Quanto o seu pequeno gasto vira?</h2>
+                    <p class="simulador__desc">Digite um gasto que se repete. O resultado muda na hora.</p>
+                    <div class="campos campos--duplo">
+                        <div class="campo">
+                            <label for="gasto-valor">Valor do gasto</label>
+                            <div class="entrada">
+                                <span class="entrada__prefixo" aria-hidden="true">R$</span>
+                                <input id="gasto-valor" name="valor" type="number" inputmode="decimal" min="0" step="0.5" value="5">
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="gasto-frequencia">Com que frequência?</label>
+                            <select id="gasto-frequencia" name="frequencia">
+                                <option value="365" selected>Todo dia</option>
+                                <option value="260">Dias úteis</option>
+                                <option value="156">3 vezes por semana</option>
+                                <option value="52">1 vez por semana</option>
+                                <option value="12">1 vez por mês</option>
+                            </select>
+                        </div>
+                    </div>
+                    <input type="hidden" name="taxa" value="0.8">
+                    <div class="resultado" aria-live="polite">
+                        <ul class="resultado__linhas">
+                            <li><span>Por mês</span> <strong data-saida="mes">R$ 152</strong></li>
+                            <li><span>Em 1 ano</span> <strong data-saida="ano">R$ 1.825</strong></li>
+                            <li><span>Em 10 anos</span> <strong data-saida="dez">R$ 18.250</strong></li>
+                        </ul>
+                        <p class="resultado__destaque">Se guardasse esse valor por 10 anos, rendendo 0,8% ao mês:
+                            <strong data-saida="guardado">R$ 30.450</strong></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="secao secao--suave" aria-labelledby="t-numeros">
+            <div class="contem">
+                <div class="secao__cabeca">
+                    <span class="sobretitulo">O tamanho do problema</span>
+                    <h2 id="t-numeros">Você não está sozinho</h2>
+                    <p>Dívida no Brasil não é falta de esforço individual. É um problema que atinge metade dos
+                        adultos — e pesa mais em quem ganha menos.</p>
+                </div>
+                <ul class="numeros">
+                    <li class="numero-cartao">
+                        <span class="numero-cartao__valor">81,7 mi</span>
+                        <span class="numero-cartao__texto">de brasileiros com o nome negativado.</span>
+                        <span class="numero-cartao__fonte">Serasa, fevereiro de 2026</span>
+                    </li>
+                    <li class="numero-cartao">
+                        <span class="numero-cartao__valor">48%</span>
+                        <span class="numero-cartao__texto">dos inadimplentes ganham até um salário mínimo.</span>
+                        <span class="numero-cartao__fonte">Serasa, 2026</span>
+                    </li>
+                    <li class="numero-cartao">
+                        <span class="numero-cartao__valor">82%</span>
+                        <span class="numero-cartao__texto">das famílias têm alguma dívida.</span>
+                        <span class="numero-cartao__fonte">CNC (Peic), julho de 2026</span>
+                    </li>
+                    <li class="numero-cartao">
+                        <span class="numero-cartao__valor">442%</span>
+                        <span class="numero-cartao__texto">ao ano: os juros médios do rotativo do cartão.</span>
+                        <span class="numero-cartao__fonte">Banco Central, junho de 2026</span>
+                    </li>
+                </ul>
+                <p class="fonte">Veja todos os números e as reportagens em <a href="dados.html">Dados e
+                        fontes</a>.</p>
+            </div>
+        </section>
+
+        <section class="secao" aria-labelledby="t-passos">
+            <div class="contem">
+                <div class="secao__cabeca">
+                    <span class="sobretitulo">Por onde começar</span>
+                    <h2 id="t-passos">Três passos que cabem em qualquer bolso</h2>
+                </div>
+                <ol class="passos">
+                    <li class="passo">
+                        <h3>Enxergue</h3>
+                        <p>Anote tudo o que gastar por 30 dias, até o chiclete. Não corte nada ainda: o objetivo
+                            é descobrir para onde o dinheiro vai.</p>
+                    </li>
+                    <li class="passo">
+                        <h3>Separe primeiro</h3>
+                        <p>Quando o dinheiro entrar, guarde um valor antes de pagar o resto — mesmo que sejam
+                            R$ 10. Esperar sobrar no fim do mês quase nunca funciona.</p>
+                    </li>
+                    <li class="passo">
+                        <h3>Proteja-se</h3>
+                        <p>Fuja do rotativo do cartão, cancele o que não usa e desconfie de qualquer pedido
+                            urgente de Pix ou promessa de dinheiro fácil.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="secao secao--escura" aria-labelledby="t-explore">
+            <div class="contem">
+                <div class="secao__cabeca">
+                    <span class="sobretitulo">Explore</span>
+                    <h2 id="t-explore">Tudo para cuidar do seu dinheiro</h2>
+                </div>
+                <ul class="cartoes">
+                    <li class="cartao">
+                        <svg class="cartao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 5a2 2 0 0 1 2-2h5v16H6a2 2 0 0 0-2 2V5Z" />
+                            <path d="M20 5a2 2 0 0 0-2-2h-5v16h5a2 2 0 0 1 2 2V5Z" />
+                        </svg>
+                        <h3>Guia prático</h3>
+                        <p>Orçamento, reserva de emergência, onde guardar e as armadilhas mais comuns, em
+                            linguagem simples.</p>
+                        <a class="cartao__link" href="guia.html">Ler o guia</a>
+                    </li>
+                    <li class="cartao">
+                        <svg class="cartao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="5" y="2" width="14" height="20" rx="2" />
+                            <path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h2M14 19h2" />
+                        </svg>
+                        <h3>Simuladores</h3>
+                        <p>Veja quanto cresce uma dívida no cartão e em quantos meses você monta a sua
+                            reserva.</p>
+                        <a class="cartao__link" href="simuladores.html">Abrir os simuladores</a>
+                    </li>
+                    <li class="cartao">
+                        <svg class="cartao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 19V5M4 19h16" />
+                            <path d="M8 15v-3M12 15V8M16 15v-5" />
+                        </svg>
+                        <h3>Dados e fontes</h3>
+                        <p>Pesquisas da Serasa, CNC e Banco Central, com links para você conferir.</p>
+                        <a class="cartao__link" href="dados.html">Ver os dados</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="contem">
+            <div class="rodape__grade">
+                <div>
+                    <p class="marca">
+                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <circle class="marca__moeda" cx="16" cy="16" r="15" />
+                    <path class="marca__cifra" d="M17.6 7v2.1c2 .3 3.4 1.4 3.9 3.2l-2.6.9c-.3-1-1.2-1.6-2.6-1.6-1.4 0-2.2.6-2.2 1.4 0 .9.8 1.2 2.9 1.7 2.8.6 4.6 1.6 4.6 4.2 0 2-1.5 3.4-4 3.8V25h-2.3v-2.3c-2.3-.3-3.9-1.6-4.4-3.6l2.7-.8c.3 1.2 1.4 2 3 2 1.6 0 2.4-.6 2.4-1.5 0-.9-.7-1.3-3-1.8-2.6-.6-4.4-1.5-4.4-4 0-1.9 1.4-3.3 3.7-3.7V7h2.3Z" /></svg>
+                        Cada Real
+                    </p>
+                    <p>Educação financeira em linguagem simples para quem vive com pouco. Conteúdo educativo,
+                        não é recomendação de investimento.</p>
+                </div>
+                <div>
+                    <h2>Aprenda</h2>
+                    <ul>
+                        <li><a href="guia.html">Guia prático</a></li>
+                        <li><a href="simuladores.html">Simuladores</a></li>
+                        <li><a href="dados.html">Dados e fontes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Projeto</h2>
+                    <ul>
+                        <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="rodape__base">© 2026 Cada Real · Feito por Yago Dos Santos.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="sem-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade — Cada Real</title>
+    <meta name="description" content="Recursos de acessibilidade do site e direitos das pessoas com deficiência no acesso à informação.">
+    <meta name="theme-color" content="#003B5C">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/menu.js" defer></script>
+</head>
+
+<body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topo">
+        <div class="contem topo__barra">
+            <a class="marca" href="index.html">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <circle class="marca__moeda" cx="16" cy="16" r="15" />
+                    <path class="marca__cifra" d="M17.6 7v2.1c2 .3 3.4 1.4 3.9 3.2l-2.6.9c-.3-1-1.2-1.6-2.6-1.6-1.4 0-2.2.6-2.2 1.4 0 .9.8 1.2 2.9 1.7 2.8.6 4.6 1.6 4.6 4.2 0 2-1.5 3.4-4 3.8V25h-2.3v-2.3c-2.3-.3-3.9-1.6-4.4-3.6l2.7-.8c.3 1.2 1.4 2 3 2 1.6 0 2.4-.6 2.4-1.5 0-.9-.7-1.3-3-1.8-2.6-.6-4.4-1.5-4.4-4 0-1.9 1.4-3.3 3.7-3.7V7h2.3Z" /></svg>
+                Cada Real
+            </a>
+            <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <path d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+                Menu
+            </button>
+            <nav class="menu" id="menu-principal" aria-label="Principal">
+                <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="guia.html">Guia</a></li>
+                        <li><a href="simuladores.html">Simuladores</a></li>
+                        <li><a href="dados.html">Dados</a></li>
+                        <li><a href="acessibilidade.html" aria-current="page">Acessibilidade</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <div class="pagina-topo">
+            <div class="contem">
+                <span class="sobretitulo">Acessibilidade</span>
+                <h1>Informação sobre dinheiro é para todo mundo</h1>
+                <p>O Cada Real foi feito para funcionar com teclado, leitor de tela, zoom e celular.</p>
+            </div>
+        </div>
+
+        <div class="secao">
+            <div class="contem leitura">
+                <h2 id="t-recursos">O que este site oferece</h2>
+                <ul>
+                    <li><strong>Atalho para o conteúdo.</strong> Aperte <kbd>Tab</kbd> ao abrir a página e use
+                        "Pular para o conteúdo" para ir direto ao texto.</li>
+                    <li><strong>Tudo pelo teclado.</strong> Links, menu, campos e botões funcionam com
+                        <kbd>Tab</kbd>, <kbd>Enter</kbd> e as setas. O foco aparece com um contorno azul.</li>
+                    <li><strong>Simuladores acessíveis.</strong> Cada campo tem rótulo, e os resultados são
+                        anunciados pelo leitor de tela quando mudam.</li>
+                    <li><strong>Estrutura clara.</strong> Cabeçalho, menu, conteúdo e rodapé marcados
+                        corretamente, com títulos em ordem e a página atual indicada no menu.</li>
+                    <li><strong>Gráficos com texto.</strong> Todo número que aparece em gráfico também está escrito
+                        ao lado ou em tabela.</li>
+                    <li><strong>Contraste AA.</strong> As cores seguem o nível AA das diretrizes WCAG.</li>
+                    <li><strong>Menos movimento.</strong> Se o seu sistema pede para reduzir animações, o site
+                        desliga as transições.</li>
+                    <li><strong>Funciona sem JavaScript.</strong> O conteúdo e o menu continuam disponíveis; só os
+                        simuladores precisam de JavaScript.</li>
+                    <li><strong>Vídeo legendado.</strong> O vídeo do guia abre com legendas ativadas.</li>
+                </ul>
+
+                <h2 id="t-dicas">Dicas para navegar</h2>
+                <dl class="glossario">
+                    <dt>Aumentar o texto</dt>
+                    <dd><kbd>Ctrl</kbd> + <kbd>+</kbd> no computador (<kbd>Cmd</kbd> + <kbd>+</kbd> no Mac), ou
+                        afaste dois dedos na tela do celular.</dd>
+                    <dt>Leitores de tela gratuitos</dt>
+                    <dd>NVDA (Windows), TalkBack (Android) e VoiceOver (iPhone e Mac).</dd>
+                    <dt>Libras</dt>
+                    <dd>O <a href="https://www.vlibras.gov.br/">VLibras</a>, do governo federal, traduz texto em
+                        português para Libras gratuitamente.</dd>
+                </dl>
+
+                <h2 id="t-direitos">Seus direitos</h2>
+                <ul>
+                    <li><strong>Lei Brasileira de Inclusão (Lei nº 13.146/2015):</strong> o artigo 63 obriga sites
+                        de empresas com sede ou representação no Brasil e de órgãos públicos a serem
+                        acessíveis.</li>
+                    <li><strong>eMAG:</strong> o Modelo de Acessibilidade em Governo Eletrônico orienta como os
+                        sites públicos devem ser feitos.</li>
+                    <li><strong>WCAG 2.1:</strong> as diretrizes internacionais do W3C, referência técnica deste
+                        site.</li>
+                    <li><strong>Código de Defesa do Consumidor:</strong> garante informação clara sobre produtos e
+                        serviços, inclusive juros e tarifas bancárias.</li>
+                </ul>
+                <p>Se um banco ou serviço não oferecer atendimento acessível, registre reclamação no Procon ou
+                    em consumidor.gov.br.</p>
+
+                <h2 id="t-referencias">Referências</h2>
+                <ul class="fontes">
+                    <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm">Lei nº
+                            13.146/2015 — Lei Brasileira de Inclusão</a></li>
+                    <li><a href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/modelo-de-acessibilidade">eMAG
+                            — Modelo de Acessibilidade em Governo Eletrônico</a></li>
+                    <li><a href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/">WCAG 2.1 em português (W3C
+                            Brasil)</a></li>
+                    <li><a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm">Lei nº 8.078/1990 —
+                            Código de Defesa do Consumidor</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="contem">
+            <div class="rodape__grade">
+                <div>
+                    <p class="marca">
+                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <circle class="marca__moeda" cx="16" cy="16" r="15" />
+                    <path class="marca__cifra" d="M17.6 7v2.1c2 .3 3.4 1.4 3.9 3.2l-2.6.9c-.3-1-1.2-1.6-2.6-1.6-1.4 0-2.2.6-2.2 1.4 0 .9.8 1.2 2.9 1.7 2.8.6 4.6 1.6 4.6 4.2 0 2-1.5 3.4-4 3.8V25h-2.3v-2.3c-2.3-.3-3.9-1.6-4.4-3.6l2.7-.8c.3 1.2 1.4 2 3 2 1.6 0 2.4-.6 2.4-1.5 0-.9-.7-1.3-3-1.8-2.6-.6-4.4-1.5-4.4-4 0-1.9 1.4-3.3 3.7-3.7V7h2.3Z" /></svg>
+                        Cada Real
+                    </p>
+                    <p>Educação financeira em linguagem simples para quem vive com pouco. Conteúdo educativo,
+                        não é recomendação de investimento.</p>
+                </div>
+                <div>
+                    <h2>Aprenda</h2>
+                    <ul>
+                        <li><a href="guia.html">Guia prático</a></li>
+                        <li><a href="simuladores.html">Simuladores</a></li>
+                        <li><a href="dados.html">Dados e fontes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Projeto</h2>
+                    <ul>
+                        <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="rodape__base">© 2026 Cada Real · Feito por Yago Dos Santos.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

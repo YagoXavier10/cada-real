@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="sem-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simuladores — Cada Real</title>
+    <meta name="description" content="Calcule quanto um pequeno gasto vira em 10 anos, quanto cresce uma dívida no cartão e quando você chega à sua reserva.">
+    <meta name="theme-color" content="#003B5C">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/simuladores.js" defer></script>
+</head>
+
+<body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topo">
+        <div class="contem topo__barra">
+            <a class="marca" href="index.html">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <circle class="marca__moeda" cx="16" cy="16" r="15" />
+                    <path class="marca__cifra" d="M17.6 7v2.1c2 .3 3.4 1.4 3.9 3.2l-2.6.9c-.3-1-1.2-1.6-2.6-1.6-1.4 0-2.2.6-2.2 1.4 0 .9.8 1.2 2.9 1.7 2.8.6 4.6 1.6 4.6 4.2 0 2-1.5 3.4-4 3.8V25h-2.3v-2.3c-2.3-.3-3.9-1.6-4.4-3.6l2.7-.8c.3 1.2 1.4 2 3 2 1.6 0 2.4-.6 2.4-1.5 0-.9-.7-1.3-3-1.8-2.6-.6-4.4-1.5-4.4-4 0-1.9 1.4-3.3 3.7-3.7V7h2.3Z" /></svg>
+                Cada Real
+            </a>
+            <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <path d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+                Menu
+            </button>
+            <nav class="menu" id="menu-principal" aria-label="Principal">
+                <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="guia.html">Guia</a></li>
+                        <li><a href="simuladores.html" aria-current="page">Simuladores</a></li>
+                        <li><a href="dados.html">Dados</a></li>
+                        <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <div class="pagina-topo">
+            <div class="contem">
+                <span class="sobretitulo">Simuladores</span>
+                <h1>Faça as contas do seu jeito</h1>
+                <p>Mude os valores e veja o resultado na hora. Nada do que você digita sai do seu
+                    computador.</p>
+            </div>
+        </div>
+
+        <div class="secao secao--suave">
+            <div class="contem simuladores">
+
+                <form class="simulador simulador--borda" id="sim-gasto" aria-labelledby="sim-gasto-titulo" novalidate>
+                    <h2 id="sim-gasto-titulo">Pequeno gasto, grande valor</h2>
+                    <p class="simulador__desc">Quanto um gasto que se repete soma com o tempo — e quanto viraria se
+                        fosse guardado.</p>
+                    <div class="campos campos--duplo">
+                        <div class="campo">
+                            <label for="gasto-valor">Valor do gasto</label>
+                            <div class="entrada">
+                                <span class="entrada__prefixo" aria-hidden="true">R$</span>
+                                <input id="gasto-valor" name="valor" type="number" inputmode="decimal" min="0" step="0.5" value="15">
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="gasto-frequencia">Frequência</label>
+                            <select id="gasto-frequencia" name="frequencia">
+                                <option value="365">Todo dia</option>
+                                <option value="260">Dias úteis</option>
+                                <option value="156" selected>3 vezes por semana</option>
+                                <option value="52">1 vez por semana</option>
+                                <option value="12">1 vez por mês</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="gasto-taxa">Rendimento ao mês</label>
+                            <div class="entrada">
+                                <input id="gasto-taxa" name="taxa" type="number" inputmode="decimal" min="0" max="5" step="0.1" value="0.8" aria-describedby="gasto-taxa-ajuda">
+                                <span class="entrada__sufixo" aria-hidden="true">%</span>
+                            </div>
+                            <span class="campo__ajuda" id="gasto-taxa-ajuda">Exemplo de aplicação conservadora.</span>
+                        </div>
+                    </div>
+                    <div class="resultado" aria-live="polite">
+                        <ul class="resultado__linhas">
+                            <li><span>Por mês</span> <strong data-saida="mes">—</strong></li>
+                            <li><span>Em 1 ano</span> <strong data-saida="ano">—</strong></li>
+                            <li><span>Em 10 anos</span> <strong data-saida="dez">—</strong></li>
+                        </ul>
+                        <p class="resultado__destaque">Guardando esse valor por 10 anos:
+                            <strong data-saida="guardado">—</strong></p>
+                        <p class="resultado__nota">Depósitos mensais iguais ao gasto do mês, sem impostos nem
+                            inflação.</p>
+                    </div>
+                </form>
+
+                <form class="simulador simulador--borda" id="sim-cartao" aria-labelledby="sim-cartao-titulo" novalidate>
+                    <h2 id="sim-cartao-titulo">Dívida no rotativo do cartão</h2>
+                    <p class="simulador__desc">O que acontece com o valor que fica sem pagar na fatura, se nada for
+                        feito.</p>
+                    <div class="campos campos--duplo">
+                        <div class="campo">
+                            <label for="cartao-valor">Valor que ficou sem pagar</label>
+                            <div class="entrada">
+                                <span class="entrada__prefixo" aria-hidden="true">R$</span>
+                                <input id="cartao-valor" name="valor" type="number" inputmode="decimal" min="0" step="10" value="500">
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="cartao-meses">Meses sem pagar</label>
+                            <div class="entrada">
+                                <input id="cartao-meses" name="meses" type="number" inputmode="numeric" min="1" max="24" step="1" value="6">
+                                <span class="entrada__sufixo" aria-hidden="true">meses</span>
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="cartao-taxa">Juros ao mês</label>
+                            <div class="entrada">
+                                <input id="cartao-taxa" name="taxa" type="number" inputmode="decimal" min="0" max="30" step="0.1" value="15.1" aria-describedby="cartao-taxa-ajuda">
+                                <span class="entrada__sufixo" aria-hidden="true">%</span>
+                            </div>
+                            <span class="campo__ajuda" id="cartao-taxa-ajuda">15,1% ao mês ≈ 442% ao ano (média do
+                                Banco Central, jun/2026).</span>
+                        </div>
+                    </div>
+                    <div class="resultado" aria-live="polite">
+                        <ul class="resultado__linhas">
+                            <li><span>Sem limite de juros, viraria</span> <strong data-saida="semTeto">—</strong></li>
+                            <li><span>Com o teto da lei (100%)</span> <strong data-saida="comTeto">—</strong></li>
+                        </ul>
+                        <p class="resultado__destaque">Só de juros e encargos, você pagaria:
+                            <strong data-saida="juros">—</strong></p>
+                        <p class="resultado__nota">Simulação didática. Desde 2024 os encargos do rotativo não podem
+                            passar de 100% da dívida, e o banco deve oferecer parcelamento após 30 dias.</p>
+                    </div>
+                </form>
+
+                <form class="simulador simulador--borda" id="sim-reserva" aria-labelledby="sim-reserva-titulo" novalidate>
+                    <h2 id="sim-reserva-titulo">Minha reserva de emergência</h2>
+                    <p class="simulador__desc">De quanto você precisa e em quanto tempo chega lá.</p>
+                    <div class="campos campos--duplo">
+                        <div class="campo">
+                            <label for="reserva-custo">Gastos essenciais por mês</label>
+                            <div class="entrada">
+                                <span class="entrada__prefixo" aria-hidden="true">R$</span>
+                                <input id="reserva-custo" name="custo" type="number" inputmode="decimal" min="0" step="50" value="1500">
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="reserva-meses">Meses de proteção</label>
+                            <select id="reserva-meses" name="cobertura">
+                                <option value="1">1 mês (primeira meta)</option>
+                                <option value="3" selected>3 meses</option>
+                                <option value="6">6 meses</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="reserva-aporte">Quanto consigo guardar por mês</label>
+                            <div class="entrada">
+                                <span class="entrada__prefixo" aria-hidden="true">R$</span>
+                                <input id="reserva-aporte" name="aporte" type="number" inputmode="decimal" min="0" step="10" value="150">
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="reserva-taxa">Rendimento ao mês</label>
+                            <div class="entrada">
+                                <input id="reserva-taxa" name="taxa" type="number" inputmode="decimal" min="0" max="5" step="0.1" value="0.8">
+                                <span class="entrada__sufixo" aria-hidden="true">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resultado" aria-live="polite">
+                        <ul class="resultado__linhas">
+                            <li><span>Meta da reserva</span> <strong data-saida="meta">—</strong></li>
+                            <li><span>Tempo até a meta</span> <strong data-saida="tempo">—</strong></li>
+                        </ul>
+                        <p class="resultado__destaque">Você chega lá por volta de:
+                            <strong data-saida="data">—</strong></p>
+                    </div>
+                </form>
+
+                <section class="simulador simulador--borda" aria-labelledby="t-como">
+                    <h2 id="t-como">Como as contas são feitas</h2>
+                    <ul class="leitura">
+                        <li><strong>Pequeno gasto:</strong> valor × vezes por ano. O valor "guardado" soma um
+                            depósito por mês com juros compostos durante 120 meses.</li>
+                        <li><strong>Cartão:</strong> a dívida cresce a juros compostos mês a mês; com o teto, o
+                            total nunca passa do dobro do valor original.</li>
+                        <li><strong>Reserva:</strong> conta quantos depósitos mensais, com rendimento, são
+                            necessários para atingir a meta.</li>
+                    </ul>
+                    <p class="fonte">Os resultados são aproximados e servem para comparar cenários, não como
+                        promessa de rendimento.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="contem">
+            <div class="rodape__grade">
+                <div>
+                    <p class="marca">
+                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <circle class="marca__moeda" cx="16" cy="16" r="15" />
+                    <path class="marca__cifra" d="M17.6 7v2.1c2 .3 3.4 1.4 3.9 3.2l-2.6.9c-.3-1-1.2-1.6-2.6-1.6-1.4 0-2.2.6-2.2 1.4 0 .9.8 1.2 2.9 1.7 2.8.6 4.6 1.6 4.6 4.2 0 2-1.5 3.4-4 3.8V25h-2.3v-2.3c-2.3-.3-3.9-1.6-4.4-3.6l2.7-.8c.3 1.2 1.4 2 3 2 1.6 0 2.4-.6 2.4-1.5 0-.9-.7-1.3-3-1.8-2.6-.6-4.4-1.5-4.4-4 0-1.9 1.4-3.3 3.7-3.7V7h2.3Z" /></svg>
+                        Cada Real
+                    </p>
+                    <p>Educação financeira em linguagem simples para quem vive com pouco. Conteúdo educativo,
+                        não é recomendação de investimento.</p>
+                </div>
+                <div>
+                    <h2>Aprenda</h2>
+                    <ul>
+                        <li><a href="guia.html">Guia prático</a></li>
+                        <li><a href="simuladores.html">Simuladores</a></li>
+                        <li><a href="dados.html">Dados e fontes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Projeto</h2>
+                    <ul>
+                        <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="rodape__base">© 2026 Cada Real · Feito por Yago Dos Santos.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
