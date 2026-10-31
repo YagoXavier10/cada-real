@@ -233,6 +233,7 @@ strong { color: var(--azul-escuro); }
 .leitura li + li { margin-top: 8px; }
 
 .guia-grade { display: grid; gap: 32px; }
+.guia-grade > * { min-width: 0; }
 .sumario {
   align-self: start; padding: 18px 20px; border-radius: var(--raio);
   background: var(--azul-suave);
@@ -265,6 +266,7 @@ th, td { padding: 12px 16px; text-align: left; border-top: 1px solid var(--linha
 thead th { background: var(--azul-escuro); color: var(--branco); font-size: .92rem; border-top: 0; }
 tbody th { font-weight: 600; color: var(--azul-escuro); }
 td { white-space: nowrap; }
+.tabela-texto td { white-space: normal; min-width: 14ch; }
 tbody tr:hover { background: var(--azul-suave); }
 .fonte { font-size: .88rem; color: var(--texto-suave); }
 
@@ -317,6 +319,93 @@ tbody tr:hover { background: var(--azul-suave); }
 .noticias-lista--resumo { margin-bottom: 24px; }
 .noticias-nota { margin-top: 36px; }
 
+/* ---------- Carrossel (vindo do Bolso Coletivo) ---------- */
+.carrossel { position: relative; overflow: hidden; background: var(--azul-escuro); color: var(--branco); }
+.carrossel__trilho { display: flex; transition: transform .5s ease; }
+.slide { min-width: 100%; }
+.slide__interno {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 24px 40px;
+  max-width: var(--largura); margin: 0 auto; padding: 48px 56px 64px;
+}
+.slide__texto { flex: 1 1 300px; }
+.slide__titulo { font-size: clamp(1.8rem, 6vw, 3rem); font-weight: 800; line-height: 1.15; letter-spacing: -.02em; }
+.slide__sub { margin-top: 12px; font-size: 1.15rem; color: var(--azul-claro); max-width: 40ch; }
+.slide__link { display: inline-block; margin-top: 18px; color: var(--branco); font-weight: 700; }
+.slide__link:hover { color: var(--azul-claro); }
+.slide__arte { flex: 0 0 auto; width: 34%; min-width: 140px; max-width: 260px; margin: 0 auto; }
+.slide__arte svg { width: 100%; height: auto; }
+.arte-claro { stroke: var(--azul-claro); fill: none; }
+.arte-branco { stroke: var(--branco); fill: none; }
+.arte-cheio-claro { fill: var(--azul-claro); }
+.arte-cheio-branco { fill: var(--branco); }
+.arte-texto { fill: var(--branco); font-family: var(--fonte); font-weight: 800; }
+
+.carrossel__seta {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 44px; height: 44px; border: 0; border-radius: 50%;
+  background: rgba(255, 255, 255, .15); color: var(--branco);
+  font-size: 1.6rem; line-height: 1; cursor: pointer;
+}
+.carrossel__seta:hover { background: rgba(255, 255, 255, .3); }
+.carrossel__seta--ant { left: 8px; }
+.carrossel__seta--prox { right: 8px; }
+.carrossel__pontos { position: absolute; left: 0; right: 0; bottom: 18px; display: flex; justify-content: center; gap: 4px; }
+.ponto { width: 28px; height: 28px; padding: 0; border: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
+.ponto::before { content: ""; width: 11px; height: 11px; border-radius: 50%; border: 2px solid var(--branco); }
+.ponto[aria-current="true"]::before { background: var(--branco); }
+/* Sem JavaScript, mostra só o primeiro slide e esconde os controles */
+.sem-js .carrossel__seta, .sem-js .carrossel__pontos { display: none; }
+
+/* ---------- Destaques com ícone (vindo do Bolso Coletivo) ---------- */
+.destaques { list-style: none; padding: 0; display: grid; gap: 28px; }
+.destaque { text-align: center; }
+.destaque__icone {
+  width: 72px; height: 72px; margin: 0 auto 14px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--azul-suave); color: var(--azul-medio);
+}
+.destaque__icone svg { width: 36px; height: 36px; }
+.destaque h3 { font-size: 1.15rem; margin-bottom: 6px; }
+
+/* ---------- Faixa de estatística (vindo do Bolso Coletivo) ---------- */
+.faixa { background: var(--azul-medio); color: var(--azul-suave); text-align: center; padding: 44px 0; }
+.faixa strong { display: block; font-size: clamp(1.6rem, 5vw, 2.2rem); color: var(--branco); margin-bottom: 6px; font-variant-numeric: tabular-nums; }
+
+/* ---------- Autores e selo (vindo do Bolso Coletivo) ---------- */
+.autores { list-style: none; padding: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); margin: 18px 0; }
+.autor { text-align: center; padding: 20px 12px; border: 1px solid var(--linha); border-radius: var(--raio); }
+.autor__inicial {
+  display: grid; place-items: center; width: 64px; height: 64px; margin: 0 auto 10px; border-radius: 50%;
+  background: var(--azul-escuro); color: var(--branco); font-weight: 800; font-size: 1.2rem;
+}
+.autor__nome { font-weight: 700; color: var(--azul-escuro); }
+.autor__papel { font-size: .88rem; color: var(--texto-suave); }
+.autor p + p { margin-top: 2px; }
+.selo {
+  display: flex; align-items: center; gap: 18px; margin: 18px 0;
+  padding: 18px 20px; border: 2px solid var(--azul-medio); border-radius: var(--raio); background: var(--azul-suave);
+}
+.selo svg { flex: 0 0 56px; width: 56px; height: 56px; }
+.selo__fundo { fill: var(--azul-escuro); }
+.selo__marca { fill: none; stroke: var(--branco); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+.selo__titulo { font-weight: 800; color: var(--azul-escuro); }
+.selo p + p { margin-top: 4px; }
+
+/* ---------- Matérias (vindo do Bolso Coletivo) ---------- */
+.materias { list-style: none; padding: 0; display: grid; gap: 16px; margin: 18px 0; }
+.materia { display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; border: 1px solid var(--linha); border-radius: var(--raio); background: var(--branco); }
+.materia__fonte { font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--azul-medio); }
+.leitura .materia h3 { margin: 0; font-size: 1.08rem; line-height: 1.35; }
+.materia p + p { margin-top: 0; }
+.materia__link { margin-top: auto; font-weight: 700; }
+
+/* ---------- Simulador em destaque no Início ---------- */
+.chamada-simulador { display: grid; gap: 32px; align-items: center; }
+.chamada-simulador h2 { font-size: clamp(1.8rem, 5vw, 2.6rem); letter-spacing: -.02em; }
+.chamada-simulador h2 span { color: var(--azul-medio); }
+.chamada-simulador p { margin-top: 14px; font-size: 1.1rem; color: var(--texto-suave); }
+.chamada-simulador .heroi__acoes .botao--vazado { color: var(--azul-escuro); border-color: var(--azul-medio); }
+.chamada-simulador .heroi__acoes .botao--vazado:hover { background: var(--azul-medio); color: var(--branco); }
+
 /* ---------- Faixa final ---------- */
 .chamada { text-align: center; }
 .chamada h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); }
@@ -351,19 +440,30 @@ tbody tr:hover { background: var(--azul-suave); }
   .passos { grid-template-columns: repeat(3, 1fr); }
   .simuladores { grid-template-columns: repeat(2, 1fr); align-items: start; }
   .noticias-lista--resumo { grid-template-columns: repeat(2, 1fr); }
+  .destaques { grid-template-columns: repeat(3, 1fr); }
+  .materias { grid-template-columns: repeat(2, 1fr); }
+  .chamada-simulador { grid-template-columns: 1fr 1fr; gap: 56px; }
+  .slide__interno { padding: 64px 72px 72px; }
   .guia-grade { grid-template-columns: 240px 1fr; gap: 56px; }
   .sumario { position: sticky; top: 88px; }
   .rodape__grade { grid-template-columns: 2fr 1fr 1fr; }
 
+}
+
+@media (min-width: 640px) and (max-width: 1099px) {
+  .menu ul { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1100px) {
   .menu-botao { display: none; }
   .menu, .menu.aberto { display: block; padding: 0; }
-  .menu ul { display: flex; gap: 4px; }
-  .menu a { padding: 8px 12px; font-size: .95rem; }
+  .menu ul { display: flex; gap: 2px; }
+  .menu a { padding: 8px 10px; font-size: .93rem; }
   .menu a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--azul-claro); }
   .topo__barra { flex-wrap: nowrap; }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 1099px) {
   .topo__barra { flex-wrap: wrap; }
   .menu { width: 100%; }
 }
@@ -378,3 +478,7 @@ tbody tr:hover { background: var(--azul-suave); }
   .heroi, .pagina-topo, .secao--escura { background: none; color: var(--texto); }
   .heroi h1, .pagina-topo h1 { color: var(--azul-escuro); }
 }
+
+/* Passos sobre fundo escuro (Início) */
+.secao--escura .passo { background: var(--azul-medio); box-shadow: none; color: var(--azul-suave); }
+.secao--escura .passo::before { background: var(--azul-claro); color: var(--azul-escuro); }

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dados e fontes — Cada Real</title>
-    <meta name="description" content="Números reais sobre endividamento, juros do cartão, assinaturas e apostas no Brasil, com fontes.">
+    <title>Dados e matérias — Cada Real</title>
+    <meta name="description" content="Tabelas e gráficos sobre pequenos gastos, endividamento, assinaturas e apostas, com as reportagens de origem.">
     <meta name="theme-color" content="#003B5C">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/estilo.css">
@@ -33,12 +33,14 @@
             <nav class="menu" id="menu-principal" aria-label="Principal">
                 <ul>
                         <li><a href="index.html">Início</a></li>
-                        <li><a href="guia.html">Guia</a></li>
+                        <li><a href="tema.html">O tema</a></li>
+                        <li><a href="aprofundamento.html">Aprofundamento</a></li>
                         <li><a href="simuladores.html">Simuladores</a></li>
                         <li><a href="dados.html" aria-current="page">Dados</a></li>
                         <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="video.html">Vídeo</a></li>
                         <li><a href="acessibilidade.html">Acessibilidade</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="autores.html">Autores</a></li>
                 </ul>
             </nav>
         </div>
@@ -47,7 +49,7 @@
     <main id="conteudo" tabindex="-1">
         <div class="pagina-topo">
             <div class="contem">
-                <span class="sobretitulo">Dados e fontes</span>
+                <span class="sobretitulo">Dados e matérias</span>
                 <h1>Os números por trás do problema</h1>
                 <p>Pesquisas recentes sobre dívidas, juros, assinaturas e apostas no Brasil — sempre com o link
                     para você conferir.</p>
@@ -86,6 +88,75 @@
                 </ul>
                 <p class="fonte" id="nota-barras">Cálculo próprio: valor × frequência × 10 anos (365 dias ou 52
                     semanas por ano). Faça a sua conta no <a href="simuladores.html">simulador</a>.</p>
+
+                <h3>Em 1 ano, em 10 anos e guardando</h3>
+                <div class="tabela-caixa" tabindex="0" role="region" aria-labelledby="cap-gastos">
+                    <table>
+                        <caption id="cap-gastos">Pequenos gastos acumulados em 1 e 10 anos e quanto renderiam se fossem guardados</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Gasto</th>
+                                <th scope="col">Frequência</th>
+                                <th scope="col">Em 1 ano</th>
+                                <th scope="col">Em 10 anos</th>
+                                <th scope="col">Se guardado (10 anos, 0,8% a.m.)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Cafezinho (R$ 5)</th>
+                                <td>Todo dia</td>
+                                <td>R$ 1.825</td>
+                                <td>R$ 18.250</td>
+                                <td>R$ 30.450</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Lanche na rua (R$ 15)</th>
+                                <td>3 vezes por semana</td>
+                                <td>R$ 2.340</td>
+                                <td>R$ 23.400</td>
+                                <td>R$ 39.042</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Delivery (R$ 40)</th>
+                                <td>1 vez por semana</td>
+                                <td>R$ 2.080</td>
+                                <td>R$ 20.800</td>
+                                <td>R$ 34.704</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Corrida por aplicativo (R$ 25)</th>
+                                <td>2 vezes por semana</td>
+                                <td>R$ 2.600</td>
+                                <td>R$ 26.000</td>
+                                <td>R$ 43.380</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Streaming esquecido (R$ 40)</th>
+                                <td>Todo mês</td>
+                                <td>R$ 480</td>
+                                <td>R$ 4.800</td>
+                                <td>R$ 8.009</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Assinatura de aplicativo (R$ 20)</th>
+                                <td>Todo mês</td>
+                                <td>R$ 240</td>
+                                <td>R$ 2.400</td>
+                                <td>R$ 4.004</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Aposta online (R$ 10)</th>
+                                <td>Todo dia</td>
+                                <td>R$ 3.650</td>
+                                <td>R$ 36.500</td>
+                                <td>R$ 60.899</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="fonte">A última coluna considera depósitos mensais iguais ao gasto do mês, rendendo 0,8% ao
+                    mês por 120 meses, sem impostos nem inflação.</p>
             </div>
         </section>
 
@@ -187,32 +258,75 @@
 
         <section class="secao" aria-labelledby="t-fontes">
             <div class="contem leitura">
-                <h2 id="t-fontes">Reportagens e fontes</h2>
+                <h2 id="t-fontes">Matérias usadas no site</h2>
+                <p>Os números do Cada Real vêm destas reportagens e pesquisas. Para o noticiário do dia, veja
+                    <a href="noticias.html">Notícias</a>.</p>
+                <ul class="materias">
+                    <li class="materia">
+                        <p class="materia__fonte">Serasa · 2026</p>
+                        <h3>42% dos inadimplentes em 2026 já tinham restrições há 10
+                            anos</h3>
+                        <p>Levantamento mostra 81,7 milhões de brasileiros com o nome restrito, quase metade da
+                            população adulta. A inadimplência se concentra em quem ganha até um salário
+                            mínimo.</p>
+                        <a class="materia__link" href="https://www.serasa.com.br/imprensa/10-anos-do-mapa-de-inadimplencia/">Ler
+                            no site da Serasa</a>
+                    </li>
+                    <li class="materia">
+                        <p class="materia__fonte">Mercado&amp;Consumo · 06/08/2026</p>
+                        <h3>CNC: endividamento das famílias sobe para 82%, mas
+                            inadimplência cai</h3>
+                        <p>Pesquisa da Confederação Nacional do Comércio aponta recorde de famílias com dívidas
+                            e o cartão de crédito como principal tipo de dívida.</p>
+                        <a class="materia__link" href="https://mercadoeconsumo.com.br/06/08/2026/noticias/cnc-endividamento-das-familias-sobe-para-82-mas-inadimplencia-cai/">Ler
+                            no Mercado&amp;Consumo</a>
+                    </li>
+                    <li class="materia">
+                        <p class="materia__fonte">Times Brasil · 30/07/2026</p>
+                        <h3>Juros do cartão rotativo sobem a 442,4% ao ano em junho</h3>
+                        <p>Dados do Banco Central mostram a alta dos juros do rotativo e do parcelamento da
+                            fatura, e lembram o limite legal de encargos.</p>
+                        <a class="materia__link" href="https://timesbrasil.com.br/brasil/juros-cartao-rotativo-4424-junho/">Ler
+                            no Times Brasil</a>
+                    </li>
+                    <li class="materia">
+                        <p class="materia__fonte">Canaltech · 2026</p>
+                        <h3>Quase 50% dos brasileiros gastam mais de R$ 100 com
+                            assinaturas por mês</h3>
+                        <p>Pesquisa sobre o peso de streaming, aplicativos e outros serviços por assinatura no
+                            orçamento.</p>
+                        <a class="materia__link" href="https://canaltech.com.br/mercado/quase-50-dos-brasileiros-gastam-mais-de-r-100-com-assinaturas-por-mes/">Ler
+                            no Canaltech</a>
+                    </li>
+                    <li class="materia">
+                        <p class="materia__fonte">InfoMoney · 2024</p>
+                        <h3>Beneficiários do Bolsa Família gastaram R$ 3 bi com bets em
+                            agosto, diz BC</h3>
+                        <p>Estudo do Banco Central sobre transferências por Pix para sites de apostas feitas
+                            por pessoas de famílias de baixa renda.</p>
+                        <a class="materia__link" href="https://www.infomoney.com.br/consumo/beneficiarios-do-bolsa-familia-gastaram-r-3-bi-com-bets-em-agosto-diz-bc/">Ler
+                            no InfoMoney</a>
+                    </li>
+                    <li class="materia">
+                        <p class="materia__fonte">Poder360 · 2024</p>
+                        <h3>Beneficiários do Bolsa Família pagam até R$ 450 mi a bets,
+                            diz estudo</h3>
+                        <p>Contraponto ao dado do Banco Central: estudo encomendado pelo setor de apostas
+                            desconta os prêmios e chega a um valor menor. Bom exemplo de por que comparar
+                            fontes.</p>
+                        <a class="materia__link" href="https://www.poder360.com.br/poder-sportsmkt/beneficiarios-do-bolsa-familia-pagam-ate-r-450-mi-a-bets-diz-estudo/">Ler
+                            no Poder360</a>
+                    </li>
+                </ul>
+
+                <h3>Materiais oficiais e gratuitos</h3>
                 <ul class="fontes">
-                    <li><span class="fontes__origem">Serasa · 2026</span>
-                        <a href="https://www.serasa.com.br/imprensa/10-anos-do-mapa-de-inadimplencia/">42% dos
-                            brasileiros inadimplentes em 2026 já enfrentaram restrições há 10 anos</a></li>
-                    <li><span class="fontes__origem">Mercado&amp;Consumo · 06/08/2026</span>
-                        <a href="https://mercadoeconsumo.com.br/06/08/2026/noticias/cnc-endividamento-das-familias-sobe-para-82-mas-inadimplencia-cai/">CNC:
-                            endividamento das famílias sobe para 82%, mas inadimplência cai</a></li>
-                    <li><span class="fontes__origem">Times Brasil · 30/07/2026</span>
-                        <a href="https://timesbrasil.com.br/brasil/juros-cartao-rotativo-4424-junho/">Juros do cartão
-                            rotativo sobem a 442,4% ao ano em junho</a></li>
-                    <li><span class="fontes__origem">Canaltech · 2026</span>
-                        <a href="https://canaltech.com.br/mercado/quase-50-dos-brasileiros-gastam-mais-de-r-100-com-assinaturas-por-mes/">Quase
-                            50% dos brasileiros gastam mais de R$ 100 com assinaturas por mês</a></li>
-                    <li><span class="fontes__origem">InfoMoney · 2024</span>
-                        <a href="https://www.infomoney.com.br/consumo/beneficiarios-do-bolsa-familia-gastaram-r-3-bi-com-bets-em-agosto-diz-bc/">Beneficiários
-                            do Bolsa Família gastaram R$ 3 bi com bets em agosto, diz BC</a></li>
-                    <li><span class="fontes__origem">Poder360 · 2024</span>
-                        <a href="https://www.poder360.com.br/poder-sportsmkt/beneficiarios-do-bolsa-familia-pagam-ate-r-450-mi-a-bets-diz-estudo/">Beneficiários
-                            do Bolsa Família pagam até R$ 450 mi a bets, diz estudo</a></li>
                     <li><span class="fontes__origem">Banco Central do Brasil</span>
-                        <a href="https://www.bcb.gov.br/cidadaniafinanceira">Cidadania Financeira: cursos e materiais
-                            gratuitos</a></li>
+                        <a href="https://www.bcb.gov.br/cidadaniafinanceira">Cidadania Financeira: cursos e materiais gratuitos</a></li>
+                    <li><span class="fontes__origem">Banco Central do Brasil</span>
+                        <a href="https://www.bcb.gov.br/pre/pef/port/caderno_cidadania_financeira.pdf">Caderno de Educação Financeira — Gestão de Finanças Pessoais (PDF)</a></li>
                     <li><span class="fontes__origem">gov.br</span>
-                        <a href="https://www.gov.br/pt-br/servicos/aprender-educacao-financeira-pessoal-no-aprender-valor">Aprender
-                            Valor: educação financeira</a></li>
+                        <a href="https://www.gov.br/pt-br/servicos/aprender-educacao-financeira-pessoal-no-aprender-valor">Aprender Valor: educação financeira</a></li>
                 </ul>
 
                 <h2 id="t-checar">Como checar uma informação</h2>
@@ -244,21 +358,23 @@
                 <div>
                     <h2>Aprenda</h2>
                     <ul>
-                        <li><a href="guia.html">Guia prático</a></li>
+                        <li><a href="tema.html">O tema</a></li>
+                        <li><a href="aprofundamento.html">Aprofundamento</a></li>
                         <li><a href="simuladores.html">Simuladores</a></li>
-                        <li><a href="dados.html">Dados e fontes</a></li>
-                        <li><a href="noticias.html">Notícias do dia</a></li>
+                        <li><a href="video.html">Vídeo educativo</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h2>Projeto</h2>
+                    <h2>Informação</h2>
                     <ul>
+                        <li><a href="dados.html">Dados e matérias</a></li>
+                        <li><a href="noticias.html">Notícias do dia</a></li>
                         <li><a href="acessibilidade.html">Acessibilidade</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="autores.html">Autores</a></li>
                     </ul>
                 </div>
             </div>
-            <p class="rodape__base">© 2026 Cada Real · Feito por Yago Dos Santos.</p>
+            <p class="rodape__base">© 2026 Cada Real · Feito por Yago Dos Santos a partir do Bolso Coletivo (UNICID).</p>
         </div>
     </footer>
 </body>

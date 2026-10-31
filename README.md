@@ -3,23 +3,32 @@
 Educação financeira em linguagem simples para quem vive com pouco. Um site estático com um guia
 prático, simuladores e dados reais com fontes.
 
+## Origem
+
+O Cada Real junta dois projetos: o **Bolso Coletivo**, trabalho em grupo da disciplina
+Desenvolvimento Front-end para Web (UNICID), e o **Cada Real**, projeto pessoal de Yago Dos Santos.
+Do Bolso Coletivo vêm o texto de aprofundamento, o tema, a página de vídeo, o carrossel e a paleta;
+do Cada Real, os simuladores, o noticiário diário, os dados atualizados e o layout.
+
 ## Páginas
 
 | Página | O que tem |
 |--------|-----------|
-| `index.html` | Abertura, simulador rápido de pequeno gasto, números do endividamento e três primeiros passos |
-| `guia.html` | Guia completo: orçamento, reserva de emergência, armadilhas, economia no dia a dia, onde guardar, vídeo e glossário |
+| `index.html` | Carrossel, simulador rápido, conteúdos em destaque, números, faixa de estatística, últimas notícias e três passos |
+| `tema.html` | O que é economizar com pouco, orçamento, reserva de emergência e glossário |
+| `aprofundamento.html` | O artigo da equipe Bolso Coletivo: trituradores de dinheiro, paradoxo, hábitos, armadilhas, dia a dia, onde guardar |
 | `simuladores.html` | Pequeno gasto em 10 anos, dívida no rotativo do cartão (com o teto legal) e reserva de emergência |
-| `dados.html` | Gráfico, tabelas de endividamento, assinaturas e apostas, reportagens e como checar uma informação |
+| `dados.html` | Gráfico e tabelas de gastos, endividamento, assinaturas e apostas, matérias de origem e como checar uma informação |
 | `noticias.html` | Manchetes do dia sobre finanças pessoais, com filtro por tema, atualizadas automaticamente |
+| `video.html` | Episódio legendado da série "Eu e meu dinheiro" (Banco Central) com perguntas para refletir |
 | `acessibilidade.html` | Recursos do site, dicas de navegação e direitos |
-| `sobre.html` | Autoria, como o site foi feito e uso de IA |
+| `autores.html` | Origem do projeto, equipe, selo de autoria, como foi feito e uso de IA |
 
 ## Tecnologias
 
 - HTML5, CSS3 e JavaScript puros. Sem frameworks, sem dependências, sem build.
 - Uma folha de estilo: `css/estilo.css`, mobile-first, com a paleta em variáveis no `:root`.
-- JavaScript só para o menu do celular, os simuladores, as notícias e a animação das barras. Sem JavaScript, o
+- JavaScript só para o menu do celular, o carrossel, os simuladores, as notícias e a animação das barras. Sem JavaScript, o
   conteúdo continua acessível.
 
 ## Paleta
@@ -65,9 +74,10 @@ nenhuma configuração extra: basta apontar para a raiz do repositório.
 ## Estrutura
 
 ```
-index.html  guia.html  simuladores.html  dados.html  noticias.html  acessibilidade.html  sobre.html
+index.html  tema.html  aprofundamento.html  simuladores.html  dados.html  noticias.html
+video.html  acessibilidade.html  autores.html
 css/estilo.css
-js/menu.js  js/simuladores.js  js/barras.js  js/noticias.js
+js/menu.js  js/carrossel.js  js/simuladores.js  js/barras.js  js/noticias.js
 img/favicon.svg
 dados/noticias.json
 scripts/atualizar_noticias.py
@@ -76,4 +86,5 @@ scripts/atualizar_noticias.py
 
 ## Autor
 
-Yago Dos Santos. Baseado no tema do trabalho em grupo *Bolso Coletivo* (UNICID).
+Yago Dos Santos, a partir do *Bolso Coletivo* (UNICID), feito com Camilo Eduardo, Carlos Eduardo,
+Gabriel Evaristo, Gabriel Oneil e João Vitor.

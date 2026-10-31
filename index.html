@@ -10,6 +10,7 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/estilo.css">
     <script src="js/menu.js" defer></script>
+    <script src="js/carrossel.js" defer></script>
     <script src="js/simuladores.js" defer></script>
     <script src="js/noticias.js" defer></script>
 </head>
@@ -34,34 +35,107 @@
             <nav class="menu" id="menu-principal" aria-label="Principal">
                 <ul>
                         <li><a href="index.html" aria-current="page">Início</a></li>
-                        <li><a href="guia.html">Guia</a></li>
+                        <li><a href="tema.html">O tema</a></li>
+                        <li><a href="aprofundamento.html">Aprofundamento</a></li>
                         <li><a href="simuladores.html">Simuladores</a></li>
                         <li><a href="dados.html">Dados</a></li>
                         <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="video.html">Vídeo</a></li>
                         <li><a href="acessibilidade.html">Acessibilidade</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="autores.html">Autores</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="conteudo" tabindex="-1">
-        <section class="heroi" aria-labelledby="titulo-pagina">
-            <div class="contem heroi__grade">
-                <div class="heroi__texto">
-                    <span class="sobretitulo">Educação financeira sem complicação</span>
-                    <h1 id="titulo-pagina">Quem ganha pouco <span>não pode perder nada.</span></h1>
+        <h1 class="sr-only">Cada Real — educação financeira para quem vive com pouco</h1>
+
+        <section class="carrossel" aria-label="Destaques" aria-roledescription="carrossel">
+            <div class="carrossel__trilho">
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="1 de 3">
+                    <div class="slide__interno">
+                        <div class="slide__texto">
+                            <p class="slide__titulo">Economia nos pequenos bolsos</p>
+                            <p class="slide__sub">Cuidar do dinheiro vivendo com pouco começa com pequenas escolhas
+                                do dia a dia.</p>
+                            <a class="slide__link" href="tema.html">Entenda o tema</a>
+                        </div>
+                        <div class="slide__arte">
+                            <svg viewBox="0 0 120 120" role="img" aria-label="Moedas de real">
+                                <circle class="arte-claro" cx="56" cy="54" r="34" stroke-width="5" />
+                                <text class="arte-texto" x="56" y="67" text-anchor="middle" font-size="32">R$</text>
+                                <circle class="arte-branco" cx="88" cy="86" r="18" stroke-width="4" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="2 de 3">
+                    <div class="slide__interno">
+                        <div class="slide__texto">
+                            <p class="slide__titulo">Pequenos hábitos, grandes resultados</p>
+                            <p class="slide__sub">Guardar um pouco com constância vira reserva graças aos juros
+                                compostos.</p>
+                            <a class="slide__link" href="simuladores.html">Faça a sua conta</a>
+                        </div>
+                        <div class="slide__arte">
+                            <svg viewBox="0 0 120 120" role="img" aria-label="Gráfico de barras crescendo">
+                                <line class="arte-claro" x1="22" y1="100" x2="106" y2="100" stroke-width="4" />
+                                <line class="arte-claro" x1="22" y1="22" x2="22" y2="100" stroke-width="4" />
+                                <rect class="arte-cheio-claro" x="36" y="72" width="14" height="28" />
+                                <rect class="arte-cheio-claro" x="58" y="56" width="14" height="44" />
+                                <rect class="arte-cheio-branco" x="80" y="38" width="14" height="62" />
+                                <polyline class="arte-branco" points="30,78 52,62 74,48 100,28" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                <polyline class="arte-branco" points="90,28 100,28 100,38" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="3 de 3">
+                    <div class="slide__interno">
+                        <div class="slide__texto">
+                            <p class="slide__titulo">Conhecimento que protege</p>
+                            <p class="slide__sub">Reconhecer armadilhas como o rotativo e os golpes evita perder o
+                                pouco que se tem.</p>
+                            <a class="slide__link" href="aprofundamento.html#armadilhas">Conheça as armadilhas</a>
+                        </div>
+                        <div class="slide__arte">
+                            <svg viewBox="0 0 120 120" role="img" aria-label="Escudo de proteção">
+                                <path class="arte-claro" d="M60 14 L96 28 V58 C96 82 80 98 60 106 C40 98 24 82 24 58 V28 Z" stroke-width="5" stroke-linejoin="round" />
+                                <path class="arte-branco" d="M44 60 L56 72 L80 44" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carrossel__seta carrossel__seta--ant" type="button" aria-label="Slide anterior">‹</button>
+            <button class="carrossel__seta carrossel__seta--prox" type="button" aria-label="Próximo slide">›</button>
+            <div class="carrossel__pontos">
+                <button class="ponto" type="button" aria-label="Ir para o slide 1" aria-current="true"></button>
+                <button class="ponto" type="button" aria-label="Ir para o slide 2"></button>
+                <button class="ponto" type="button" aria-label="Ir para o slide 3"></button>
+            </div>
+        </section>
+
+        <section class="secao secao--suave" aria-labelledby="t-chamada">
+            <div class="contem chamada-simulador">
+                <div>
+                    <span class="sobretitulo">Faça a conta</span>
+                    <h2 id="t-chamada">Quem ganha pouco <span>não pode perder nada.</span></h2>
                     <p>Um café por dia, uma assinatura esquecida, a fatura paga pela metade. Sozinhos parecem
-                        nada — somados, levam o que faltava para fechar o mês. Aqui você descobre para onde vai
-                        cada real e como trazer ele de volta.</p>
+                        nada — somados, levam o que faltava para fechar o mês. Descubra para onde vai cada real e
+                        como trazer ele de volta.</p>
                     <div class="heroi__acoes">
-                        <a class="botao botao--cheio" href="guia.html">Ler o guia</a>
-                        <a class="botao botao--vazado" href="simuladores.html">Ver todos os simuladores</a>
+                        <a class="botao botao--azul" href="tema.html">Começar pelo tema</a>
+                        <a class="botao botao--vazado" href="simuladores.html">Todos os simuladores</a>
                     </div>
                 </div>
 
                 <form class="simulador" id="sim-gasto" aria-labelledby="sim-gasto-titulo" novalidate>
-                    <h2 id="sim-gasto-titulo">Quanto o seu pequeno gasto vira?</h2>
+                    <h3 id="sim-gasto-titulo">Quanto o seu pequeno gasto vira?</h3>
                     <p class="simulador__desc">Digite um gasto que se repete. O resultado muda na hora.</p>
                     <div class="campos campos--duplo">
                         <div class="campo">
@@ -96,6 +170,75 @@
             </div>
         </section>
 
+        <section class="secao" aria-labelledby="t-destaque">
+            <div class="contem">
+                <div class="secao__cabeca">
+                    <span class="sobretitulo">Conteúdos em destaque</span>
+                    <h2 id="t-destaque">Tudo para cuidar do seu dinheiro, em um lugar só</h2>
+                </div>
+                <ul class="cartoes">
+                    <li class="cartao">
+                        <svg class="cartao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 5a2 2 0 0 1 2-2h5v16H6a2 2 0 0 0-2 2V5Z" />
+                            <path d="M20 5a2 2 0 0 0-2-2h-5v16h5a2 2 0 0 1 2 2V5Z" />
+                        </svg>
+                        <h3>O tema</h3>
+                        <p>Uma introdução direta: o que é economizar com pouco, como montar um orçamento e por que ter
+                            uma reserva.</p>
+                        <a class="cartao__link" href="tema.html">Ler o tema</a>
+                    </li>
+                    <li class="cartao">
+                        <svg class="cartao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 19V5" />
+                            <path d="M4 19h16" />
+                            <path d="M7 15l4-4 3 3 5-6" />
+                        </svg>
+                        <h3>Aprofundamento</h3>
+                        <p>O paradoxo de quem ganha pouco, as armadilhas que drenam o orçamento e onde guardar o que
+                            sobra.</p>
+                        <a class="cartao__link" href="aprofundamento.html">Ler o aprofundamento</a>
+                    </li>
+                    <li class="cartao">
+                        <svg class="cartao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="5" y="2" width="14" height="20" rx="2" />
+                            <path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h2M14 19h2" />
+                        </svg>
+                        <h3>Simuladores</h3>
+                        <p>Quanto cresce uma dívida no cartão e em quantos meses você monta a sua reserva.</p>
+                        <a class="cartao__link" href="simuladores.html">Abrir os simuladores</a>
+                    </li>
+                    <li class="cartao">
+                        <svg class="cartao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="16" rx="2" />
+                            <path d="M3 10h18M3 15h18M9 4v16M15 4v16" />
+                        </svg>
+                        <h3>Dados e matérias</h3>
+                        <p>Quanto cada pequeno gasto soma em 1 e 10 anos, dados de dívidas e as reportagens de origem.</p>
+                        <a class="cartao__link" href="dados.html">Ver os dados</a>
+                    </li>
+                    <li class="cartao">
+                        <svg class="cartao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 5h13v14H6a2 2 0 0 1-2-2V5Z" />
+                            <path d="M17 8h3v9a2 2 0 0 1-4 0" />
+                            <path d="M7 8h7M7 12h7M7 16h5" />
+                        </svg>
+                        <h3>Notícias do dia</h3>
+                        <p>Manchetes sobre dívidas, golpes, benefícios e preços, atualizadas toda manhã.</p>
+                        <a class="cartao__link" href="noticias.html">Ler as notícias</a>
+                    </li>
+                    <li class="cartao">
+                        <svg class="cartao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="5" width="20" height="14" rx="2" />
+                            <path d="m10 9 5 3-5 3V9Z" />
+                        </svg>
+                        <h3>Vídeo educativo</h3>
+                        <p>Um episódio legendado da série "Eu e meu dinheiro", do Banco Central.</p>
+                        <a class="cartao__link" href="video.html">Assistir ao vídeo</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <section class="secao secao--suave" aria-labelledby="t-numeros">
             <div class="contem">
                 <div class="secao__cabeca">
@@ -126,8 +269,57 @@
                         <span class="numero-cartao__fonte">Banco Central, junho de 2026</span>
                     </li>
                 </ul>
-                <p class="fonte">Veja todos os números e as reportagens em <a href="dados.html">Dados e
-                        fontes</a>.</p>
+            </div>
+        </section>
+
+        <section class="secao" aria-labelledby="t-saber">
+            <div class="contem">
+                <div class="secao__cabeca">
+                    <span class="sobretitulo">O essencial</span>
+                    <h2 id="t-saber">Tudo que você precisa saber</h2>
+                </div>
+                <ul class="destaques">
+                    <li class="destaque">
+                        <div class="destaque__icone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <ellipse cx="12" cy="6" rx="7" ry="3" />
+                                <path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6" />
+                                <path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" />
+                            </svg>
+                        </div>
+                        <h3>Hábitos que rendem</h3>
+                        <p>Pequenas economias diárias viram reserva quando mantidas com constância.</p>
+                    </li>
+                    <li class="destaque">
+                        <div class="destaque__icone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 3 2 20h20L12 3Z" />
+                                <path d="M12 10v4" />
+                                <path d="M12 17.5h.01" />
+                            </svg>
+                        </div>
+                        <h3>Armadilhas que drenam</h3>
+                        <p>Rotativo, parcelamento, apostas e assinaturas esquecidas pesam no orçamento.</p>
+                    </li>
+                    <li class="destaque">
+                        <div class="destaque__icone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M3 9l9-5 9 5" />
+                                <path d="M5 10v8M10 10v8M14 10v8M19 10v8" />
+                                <path d="M3 21h18" />
+                            </svg>
+                        </div>
+                        <h3>Onde guardar</h3>
+                        <p>Poupança, CDB e Tesouro Selic — opções acessíveis para começar com pouco.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="faixa" aria-label="Exemplo de economia">
+            <div class="contem">
+                <strong>R$ 5 por dia = R$ 1.825 por ano</strong>
+                <p>E, rendendo perto de 0,8% ao mês, o total passa de R$ 11 mil em cinco anos.</p>
             </div>
         </section>
 
@@ -142,7 +334,7 @@
             </div>
         </section>
 
-        <section class="secao secao--suave" aria-labelledby="t-passos">
+        <section class="secao secao--escura" aria-labelledby="t-passos">
             <div class="contem">
                 <div class="secao__cabeca">
                     <span class="sobretitulo">Por onde começar</span>
@@ -167,46 +359,6 @@
                 </ol>
             </div>
         </section>
-
-        <section class="secao secao--escura" aria-labelledby="t-explore">
-            <div class="contem">
-                <div class="secao__cabeca">
-                    <span class="sobretitulo">Explore</span>
-                    <h2 id="t-explore">Tudo para cuidar do seu dinheiro</h2>
-                </div>
-                <ul class="cartoes">
-                    <li class="cartao">
-                        <svg class="cartao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M4 5a2 2 0 0 1 2-2h5v16H6a2 2 0 0 0-2 2V5Z" />
-                            <path d="M20 5a2 2 0 0 0-2-2h-5v16h5a2 2 0 0 1 2 2V5Z" />
-                        </svg>
-                        <h3>Guia prático</h3>
-                        <p>Orçamento, reserva de emergência, onde guardar e as armadilhas mais comuns, em
-                            linguagem simples.</p>
-                        <a class="cartao__link" href="guia.html">Ler o guia</a>
-                    </li>
-                    <li class="cartao">
-                        <svg class="cartao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <rect x="5" y="2" width="14" height="20" rx="2" />
-                            <path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h2M14 19h2" />
-                        </svg>
-                        <h3>Simuladores</h3>
-                        <p>Veja quanto cresce uma dívida no cartão e em quantos meses você monta a sua
-                            reserva.</p>
-                        <a class="cartao__link" href="simuladores.html">Abrir os simuladores</a>
-                    </li>
-                    <li class="cartao">
-                        <svg class="cartao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M4 19V5M4 19h16" />
-                            <path d="M8 15v-3M12 15V8M16 15v-5" />
-                        </svg>
-                        <h3>Dados e fontes</h3>
-                        <p>Pesquisas da Serasa, CNC e Banco Central, com links para você conferir.</p>
-                        <a class="cartao__link" href="dados.html">Ver os dados</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
     </main>
 
     <footer class="rodape">
@@ -225,21 +377,23 @@
                 <div>
                     <h2>Aprenda</h2>
                     <ul>
-                        <li><a href="guia.html">Guia prático</a></li>
+                        <li><a href="tema.html">O tema</a></li>
+                        <li><a href="aprofundamento.html">Aprofundamento</a></li>
                         <li><a href="simuladores.html">Simuladores</a></li>
-                        <li><a href="dados.html">Dados e fontes</a></li>
-                        <li><a href="noticias.html">Notícias do dia</a></li>
+                        <li><a href="video.html">Vídeo educativo</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h2>Projeto</h2>
+                    <h2>Informação</h2>
                     <ul>
+                        <li><a href="dados.html">Dados e matérias</a></li>
+                        <li><a href="noticias.html">Notícias do dia</a></li>
                         <li><a href="acessibilidade.html">Acessibilidade</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="autores.html">Autores</a></li>
                     </ul>
                 </div>
             </div>
-            <p class="rodape__base">© 2026 Cada Real · Feito por Yago Dos Santos.</p>
+            <p class="rodape__base">© 2026 Cada Real · Feito por Yago Dos Santos a partir do Bolso Coletivo (UNICID).</p>
         </div>
     </footer>
 </body>
