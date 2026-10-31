@@ -50,9 +50,9 @@ Todos os campos têm `<label for>` ligado ao `id` e textos de ajuda com `aria-de
 
 | Recurso | Teste | Resultado |
 |---------|-------|-----------|
-| `<video controls poster>` | Carrega, mostra o pôster, 36 s | ✅ |
+| `<video controls poster>` | Carrega, mostra o pôster, 38 s | ✅ |
 | Legendas (`<track kind="captions">`) | Faixa "Português" ativa por padrão | ✅ |
-| `<audio controls>` | Carrega, 34 s | ✅ |
+| `<audio controls>` | Carrega, 31 s | ✅ |
 | `<iframe>` YouTube (Banco Central) | Carrega com legendas ativadas | ✅ |
 | Transcrições | Disponíveis em "Ler a transcrição" | ✅ |
 
