@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="sem-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídia — Cada Real</title>
+    <meta name="description" content="Vídeo narrado com legendas, áudio com dica e vídeo do Banco Central sobre decisões financeiras.">
+    <meta name="theme-color" content="#003B5C">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/menu.js" defer></script>
+</head>
+
+<body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topo">
+        <div class="contem topo__barra">
+            <a class="marca" href="index.html">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <circle class="marca__moeda" cx="16" cy="16" r="15" />
+                    <path class="marca__cifra" d="M17.6 7v2.1c2 .3 3.4 1.4 3.9 3.2l-2.6.9c-.3-1-1.2-1.6-2.6-1.6-1.4 0-2.2.6-2.2 1.4 0 .9.8 1.2 2.9 1.7 2.8.6 4.6 1.6 4.6 4.2 0 2-1.5 3.4-4 3.8V25h-2.3v-2.3c-2.3-.3-3.9-1.6-4.4-3.6l2.7-.8c.3 1.2 1.4 2 3 2 1.6 0 2.4-.6 2.4-1.5 0-.9-.7-1.3-3-1.8-2.6-.6-4.4-1.5-4.4-4 0-1.9 1.4-3.3 3.7-3.7V7h2.3Z" /></svg>
+                Cada Real
+            </a>
+            <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <path d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+                Menu
+            </button>
+            <nav class="menu" id="menu-principal" aria-label="Principal">
+                <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="impacto.html">Impacto</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="midia.html" aria-current="page">Mídia</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <div class="pagina-topo">
+            <div class="contem">
+                <span class="sobretitulo">Mídia</span>
+                <h1>Para ver, ouvir e compartilhar</h1>
+                <p>Um vídeo curto, uma dica em áudio e um episódio do Banco Central — todos com legenda ou
+                    transcrição.</p>
+            </div>
+        </div>
+
+        <div class="secao">
+            <div class="contem leitura">
+                <section aria-labelledby="t-video-proprio">
+                    <h2 id="t-video-proprio">Vídeo: cada real conta</h2>
+                    <p>Em 36 segundos, os principais recados do Cada Real. As legendas podem ser ligadas no botão
+                        "CC" do player.</p>
+                    <div class="video">
+                        <video controls preload="metadata" poster="img/poster-video.webp" width="1280" height="720">
+                            <source src="assets/video/pequenos-gastos.mp4" type="video/mp4">
+                            <track kind="captions" src="assets/video/pequenos-gastos.vtt" srclang="pt-BR"
+                                label="Português" default>
+                            Seu navegador não reproduz vídeos. <a href="assets/video/pequenos-gastos.mp4">Baixe o
+                                vídeo</a>.
+                        </video>
+                    </div>
+                    <details class="transcricao">
+                        <summary>Ler a transcrição do vídeo</summary>
+                        <p>Quem vive com pouco sabe: cada real conta. Um café de cinco reais por dia vira mil
+                            oitocentos e vinte e cinco reais em um ano. Pagar só o mínimo do cartão joga o resto no
+                            rotativo, que já passou de quatrocentos por cento ao ano. Recebeu um pedido urgente de Pix?
+                            Pare, desligue e confirme por outro canal. Anote seus gastos, compare preços e guarde um
+                            pouco assim que o dinheiro entrar. Cada Real: educação financeira para quem vive com
+                            pouco.</p>
+                    </details>
+                    <p class="fonte">Produção da equipe com imagens da <a href="galeria.html">galeria</a> e narração
+                        em voz sintética, 2026.</p>
+                </section>
+
+                <section aria-labelledby="t-audio">
+                    <h2 id="t-audio">Áudio: três passos para organizar o dinheiro</h2>
+                    <p>Uma dica de pouco mais de 30 segundos para ouvir no ônibus ou mandar para alguém.</p>
+                    <audio class="audio" controls preload="metadata">
+                        <source src="assets/audio/dica-tres-passos.mp3" type="audio/mpeg">
+                        Seu navegador não reproduz áudio. <a href="assets/audio/dica-tres-passos.mp3">Baixe o
+                            áudio</a>.
+                    </audio>
+                    <details class="transcricao">
+                        <summary>Ler a transcrição do áudio</summary>
+                        <p>Dica do Cada Real. Organizar o dinheiro começa em três passos. Primeiro: enxergue. Anote
+                            tudo o que gastar durante trinta dias, até o chiclete. Segundo: separe primeiro. Quando o
+                            dinheiro entrar, guarde um valor antes de pagar o resto, mesmo que sejam dez reais.
+                            Terceiro: proteja-se. Fuja do rotativo do cartão, cancele assinaturas que você não usa e
+                            desconfie de qualquer pedido urgente de Pix. Pouco, mas sempre: é assim que se constrói uma
+                            reserva.</p>
+                    </details>
+                    <p class="fonte">Produção da equipe, narração em voz sintética, 2026.</p>
+                </section>
+
+                <section aria-labelledby="t-video-bc">
+                    <h2 id="t-video-bc">Episódio do Banco Central: O Piano ou a Aninha</h2>
+                    <p>Da série <strong>"Eu e meu dinheiro"</strong>, produzida pelo Banco Central do Brasil para
+                        ajudar as pessoas a pensar nas próprias decisões financeiras. As legendas já vêm
+                        ativadas.</p>
+                    <div class="video">
+                        <iframe src="https://www.youtube-nocookie.com/embed/A7XxxYZjQ4k?cc_load_policy=1&amp;hl=pt-BR"
+                            title="O Piano ou a Aninha — série Eu e meu dinheiro, Banco Central do Brasil (com legendas)"
+                            loading="lazy"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="fonte">Fonte: Banco Central do Brasil, série "Eu e meu dinheiro". <a
+                            href="https://www.youtube.com/watch?v=A7XxxYZjQ4k">Assistir no YouTube</a>.</p>
+                    <h3>Para pensar depois de assistir</h3>
+                    <ol>
+                        <li>Que escolha o personagem precisou fazer? Quais eram as opções?</li>
+                        <li>O que ele ganhou e o que deixou de ganhar com a decisão?</li>
+                        <li>Você já passou por uma escolha parecida? Como decidiu?</li>
+                        <li>Ter um pouco de dinheiro guardado mudaria essa decisão?</li>
+                    </ol>
+                    <h3>Outros episódios da série</h3>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=FdTip4SdWMw">Eu vou levar</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=b7usobdYpso">O Pão da Avó</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=k6O554uP2Kc">Duas vezes Judite</a></li>
+                    </ul>
+                </section>
+
+                <section aria-labelledby="t-como-usar">
+                    <h2 id="t-como-usar">Como usar os players</h2>
+                    <ul>
+                        <li>Todos funcionam pelo teclado: <kbd>Tab</kbd> chega ao player, <kbd>Espaço</kbd> pausa e
+                            continua, <kbd>←</kbd> e <kbd>→</kbd> voltam e avançam.</li>
+                        <li>O botão "CC" liga e desliga as legendas dos vídeos.</li>
+                        <li>As transcrições ficam logo abaixo de cada mídia, em "Ler a transcrição".</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="contem">
+            <div class="rodape__grade">
+                <div>
+                    <p class="marca">
+                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <circle class="marca__moeda" cx="16" cy="16" r="15" />
+                    <path class="marca__cifra" d="M17.6 7v2.1c2 .3 3.4 1.4 3.9 3.2l-2.6.9c-.3-1-1.2-1.6-2.6-1.6-1.4 0-2.2.6-2.2 1.4 0 .9.8 1.2 2.9 1.7 2.8.6 4.6 1.6 4.6 4.2 0 2-1.5 3.4-4 3.8V25h-2.3v-2.3c-2.3-.3-3.9-1.6-4.4-3.6l2.7-.8c.3 1.2 1.4 2 3 2 1.6 0 2.4-.6 2.4-1.5 0-.9-.7-1.3-3-1.8-2.6-.6-4.4-1.5-4.4-4 0-1.9 1.4-3.3 3.7-3.7V7h2.3Z" /></svg>
+                        Cada Real
+                    </p>
+                    <p>Educação financeira em linguagem simples para quem vive com pouco. Conteúdo educativo,
+                        não é recomendação de investimento.</p>
+                </div>
+                <div>
+                    <h2>Aprenda</h2>
+                    <ul>
+                        <li><a href="tema.html">O tema</a></li>
+                        <li><a href="aprofundamento.html">Aprofundamento</a></li>
+                        <li><a href="simuladores.html">Simuladores</a></li>
+                        <li><a href="impacto.html">Impacto em dados</a></li>
+                        <li><a href="noticias.html">Notícias do dia</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>O projeto</h2>
+                    <ul>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="midia.html">Mídia</a></li>
+                        <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="orcamento_hospedagem.html">Orçamento de hospedagem</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="rodape__base">© 2026 Cada Real · Projeto A2 de Desenvolvimento Front-end para Web (UNICID) ·
+                Equipe Bolso Coletivo.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

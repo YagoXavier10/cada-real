@@ -19,14 +19,19 @@ e preços — num site leve, acessível e sem anúncios.
 | | Página | Para quê |
 |---|--------|----------|
 | 🏠 | [Início](https://yagoxavier10.github.io/cada-real/) | Visão geral, simulador rápido e últimas notícias |
-| 📖 | [O tema](https://yagoxavier10.github.io/cada-real/tema.html) | O que é economizar com pouco, como montar um orçamento e por que ter uma reserva |
-| 🔎 | [Aprofundamento](https://yagoxavier10.github.io/cada-real/aprofundamento.html) | O paradoxo de quem ganha pouco, as armadilhas e onde guardar o que sobra |
-| 🧮 | [Simuladores](https://yagoxavier10.github.io/cada-real/simuladores.html) | Pequeno gasto em 10 anos, dívida no rotativo do cartão e reserva de emergência |
-| 📊 | [Dados e matérias](https://yagoxavier10.github.io/cada-real/dados.html) | Gráfico e tabelas com fonte, reportagens de origem e como checar uma informação |
+| 👥 | [Sobre](https://yagoxavier10.github.io/cada-real/sobre.html) | História, missão, visão, valores e equipe |
+| 🌱 | [Projetos](https://yagoxavier10.github.io/cada-real/projetos.html) | Simuladores, oficinas, notícias e conteúdo acessível |
+| 📊 | [Impacto](https://yagoxavier10.github.io/cada-real/impacto.html) | Dados, tabelas, gráfico e matérias de origem |
+| 🖼️ | [Galeria](https://yagoxavier10.github.io/cada-real/galeria.html) | Imagens com legendas e fontes |
+| 🎬 | [Mídia](https://yagoxavier10.github.io/cada-real/midia.html) | Vídeo com legendas, áudio com transcrição e vídeo do Banco Central |
 | 📰 | [Notícias do dia](https://yagoxavier10.github.io/cada-real/noticias.html) | Manchetes de finanças pessoais, atualizadas toda manhã |
-| 🎬 | [Vídeo educativo](https://yagoxavier10.github.io/cada-real/video.html) | Episódio legendado da série "Eu e meu dinheiro", do Banco Central |
 | ♿ | [Acessibilidade](https://yagoxavier10.github.io/cada-real/acessibilidade.html) | Recursos do site e direitos |
-| 👥 | [Autores](https://yagoxavier10.github.io/cada-real/autores.html) | Quem fez, origem do projeto e uso de IA |
+| ✉️ | [Contato](https://yagoxavier10.github.io/cada-real/contato.html) | Formulário validado e dados de atendimento |
+| 💸 | [Orçamento](https://yagoxavier10.github.io/cada-real/orcamento_hospedagem.html) | Comparativo de hospedagem e domínio |
+| 📖 | [O tema](https://yagoxavier10.github.io/cada-real/tema.html) · [Aprofundamento](https://yagoxavier10.github.io/cada-real/aprofundamento.html) · [Simuladores](https://yagoxavier10.github.io/cada-real/simuladores.html) | Conteúdo educativo e ferramentas |
+
+A documentação da Atividade A2 (escopo, diário de bordo, orçamento e evidências de testes) está em
+[`docs/`](docs/).
 
 ### Atalhos
 
@@ -35,7 +40,7 @@ e preços — num site leve, acessível e sem anúncios.
 - [Monte o seu orçamento](https://yagoxavier10.github.io/cada-real/tema.html#orcamento)
 - [Simule uma dívida no cartão](https://yagoxavier10.github.io/cada-real/simuladores.html#sim-cartao)
 - [Quanto tempo até a sua reserva](https://yagoxavier10.github.io/cada-real/simuladores.html#sim-reserva)
-- [Como checar uma informação](https://yagoxavier10.github.io/cada-real/dados.html#t-checar)
+- [Como checar uma informação](https://yagoxavier10.github.io/cada-real/impacto.html#t-checar)
 
 ---
 
@@ -106,11 +111,13 @@ no site de cada veículo.
 ### Estrutura
 
 ```
-index.html  tema.html  aprofundamento.html  simuladores.html  dados.html  noticias.html
-video.html  acessibilidade.html  autores.html
+index.html  tema.html  aprofundamento.html  simuladores.html  impacto.html  noticias.html
+midia.html  acessibilidade.html  sobre.html
 css/estilo.css
-js/menu.js  js/carrossel.js  js/simuladores.js  js/barras.js  js/noticias.js
-img/favicon.svg
+js/menu.js  js/carrossel.js  js/simuladores.js  js/barras.js  js/noticias.js  js/contato.js
+img/  (galeria/, projetos/, pôster, favicon)
+assets/  (video/, audio/)
+docs/  (documentação da A2)
 dados/noticias.json
 scripts/atualizar_noticias.py
 .github/workflows/noticias.yml

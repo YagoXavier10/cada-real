@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="sem-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato — Cada Real</title>
+    <meta name="description" content="Fale com a equipe do Cada Real: formulário de contato, dados de atendimento e integrantes.">
+    <meta name="theme-color" content="#003B5C">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/contato.js" defer></script>
+</head>
+
+<body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topo">
+        <div class="contem topo__barra">
+            <a class="marca" href="index.html">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <circle class="marca__moeda" cx="16" cy="16" r="15" />
+                    <path class="marca__cifra" d="M17.6 7v2.1c2 .3 3.4 1.4 3.9 3.2l-2.6.9c-.3-1-1.2-1.6-2.6-1.6-1.4 0-2.2.6-2.2 1.4 0 .9.8 1.2 2.9 1.7 2.8.6 4.6 1.6 4.6 4.2 0 2-1.5 3.4-4 3.8V25h-2.3v-2.3c-2.3-.3-3.9-1.6-4.4-3.6l2.7-.8c.3 1.2 1.4 2 3 2 1.6 0 2.4-.6 2.4-1.5 0-.9-.7-1.3-3-1.8-2.6-.6-4.4-1.5-4.4-4 0-1.9 1.4-3.3 3.7-3.7V7h2.3Z" /></svg>
+                Cada Real
+            </a>
+            <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <path d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+                Menu
+            </button>
+            <nav class="menu" id="menu-principal" aria-label="Principal">
+                <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="impacto.html">Impacto</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="midia.html">Mídia</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                        <li><a href="contato.html" aria-current="page">Contato</a></li>
+                        <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <div class="pagina-topo">
+            <div class="contem">
+                <span class="sobretitulo">Contato</span>
+                <h1>Fale com a equipe</h1>
+                <p>Dúvidas, sugestões, pedidos de oficina ou uma barreira de acessibilidade que você encontrou: a
+                    gente quer saber.</p>
+            </div>
+        </div>
+
+        <div class="secao secao--suave">
+            <div class="contem contato-grade">
+                <form class="simulador formulario" id="form-contato" action="#" method="post" aria-labelledby="t-form">
+                    <h2 id="t-form">Envie uma mensagem</h2>
+                    <p class="simulador__desc">Campos com <span aria-hidden="true">*</span><span class="sr-only">asterisco</span>
+                        são obrigatórios.</p>
+                    <div class="campos campos--duplo">
+                        <div class="campo">
+                            <label for="c-nome">Nome completo <span aria-hidden="true">*</span></label>
+                            <input class="campo__entrada" id="c-nome" name="nome" type="text" required minlength="3"
+                                maxlength="80" autocomplete="name">
+                        </div>
+                        <div class="campo">
+                            <label for="c-email">E-mail <span aria-hidden="true">*</span></label>
+                            <input class="campo__entrada" id="c-email" name="email" type="email" required
+                                autocomplete="email" aria-describedby="c-email-ajuda">
+                            <span class="campo__ajuda" id="c-email-ajuda">Exemplo: nome@email.com</span>
+                        </div>
+                        <div class="campo">
+                            <label for="c-telefone">Telefone ou WhatsApp</label>
+                            <input class="campo__entrada" id="c-telefone" name="telefone" type="tel"
+                                pattern="\(?[0-9]{2}\)? ?9?[0-9]{4}-?[0-9]{4}" autocomplete="tel"
+                                aria-describedby="c-telefone-ajuda">
+                            <span class="campo__ajuda" id="c-telefone-ajuda">Com DDD. Exemplo: (11) 91234-5678</span>
+                        </div>
+                        <div class="campo">
+                            <label for="c-idade">Idade</label>
+                            <input class="campo__entrada" id="c-idade" name="idade" type="number" min="14" max="120"
+                                step="1" inputmode="numeric">
+                        </div>
+                        <div class="campo">
+                            <label for="c-assunto">Assunto <span aria-hidden="true">*</span></label>
+                            <select id="c-assunto" name="assunto" required>
+                                <option value="">Escolha uma opção</option>
+                                <option value="duvida">Dúvida sobre finanças</option>
+                                <option value="oficina">Pedir uma oficina</option>
+                                <option value="acessibilidade">Problema de acessibilidade</option>
+                                <option value="sugestao">Sugestão para o site</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="c-data">Data preferida para a oficina</label>
+                            <input class="campo__entrada" id="c-data" name="data" type="date" min="2026-11-03"
+                                aria-describedby="c-data-ajuda">
+                            <span class="campo__ajuda" id="c-data-ajuda">Só se você escolheu "Pedir uma oficina".</span>
+                        </div>
+                    </div>
+                    <div class="campo campo--largo">
+                        <label for="c-mensagem">Mensagem <span aria-hidden="true">*</span></label>
+                        <textarea class="campo__entrada" id="c-mensagem" name="mensagem" rows="5" required
+                            minlength="10" maxlength="1000"></textarea>
+                    </div>
+                    <div class="campo campo--caixa">
+                        <input id="c-aceite" name="aceite" type="checkbox" required>
+                        <label for="c-aceite">Concordo que meus dados sejam usados só para responder esta mensagem
+                            (LGPD). <span aria-hidden="true">*</span></label>
+                    </div>
+                    <button class="botao botao--azul" type="submit">Enviar mensagem</button>
+                    <p class="formulario__retorno" id="form-retorno" role="status" aria-live="polite"></p>
+                </form>
+
+                <div>
+                    <section class="cartao" aria-labelledby="t-atendimento">
+                        <h2 id="t-atendimento">Atendimento</h2>
+                        <p class="fonte">Dados fictícios para fins acadêmicos.</p>
+                        <dl class="glossario">
+                            <dt>E-mail</dt>
+                            <dd>contato@cadareal.exemplo.com.br</dd>
+                            <dt>WhatsApp</dt>
+                            <dd>(11) 90000-0000</dd>
+                            <dt>Endereço</dt>
+                            <dd>Rua Exemplo, 123 — Tatuapé, São Paulo — SP</dd>
+                            <dt>Horário</dt>
+                            <dd>Segunda a sexta, das 9h às 18h</dd>
+                        </dl>
+                    </section>
+
+                    <section class="cartao contato-equipe" aria-labelledby="t-membros">
+                        <h2 id="t-membros">Membros da equipe</h2>
+                        <ul>
+                            <li>Camilo Eduardo</li>
+                            <li>Carlos Eduardo</li>
+                            <li>Gabriel Evaristo</li>
+                            <li>Gabriel Oneil</li>
+                            <li>João Vitor</li>
+                            <li>Yago Dos Santos</li>
+                        </ul>
+                        <a class="cartao__link" href="sobre.html#t-equipe">Conheça a equipe</a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="contem">
+            <div class="rodape__grade">
+                <div>
+                    <p class="marca">
+                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <circle class="marca__moeda" cx="16" cy="16" r="15" />
+                    <path class="marca__cifra" d="M17.6 7v2.1c2 .3 3.4 1.4 3.9 3.2l-2.6.9c-.3-1-1.2-1.6-2.6-1.6-1.4 0-2.2.6-2.2 1.4 0 .9.8 1.2 2.9 1.7 2.8.6 4.6 1.6 4.6 4.2 0 2-1.5 3.4-4 3.8V25h-2.3v-2.3c-2.3-.3-3.9-1.6-4.4-3.6l2.7-.8c.3 1.2 1.4 2 3 2 1.6 0 2.4-.6 2.4-1.5 0-.9-.7-1.3-3-1.8-2.6-.6-4.4-1.5-4.4-4 0-1.9 1.4-3.3 3.7-3.7V7h2.3Z" /></svg>
+                        Cada Real
+                    </p>
+                    <p>Educação financeira em linguagem simples para quem vive com pouco. Conteúdo educativo,
+                        não é recomendação de investimento.</p>
+                </div>
+                <div>
+                    <h2>Aprenda</h2>
+                    <ul>
+                        <li><a href="tema.html">O tema</a></li>
+                        <li><a href="aprofundamento.html">Aprofundamento</a></li>
+                        <li><a href="simuladores.html">Simuladores</a></li>
+                        <li><a href="impacto.html">Impacto em dados</a></li>
+                        <li><a href="noticias.html">Notícias do dia</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>O projeto</h2>
+                    <ul>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="midia.html">Mídia</a></li>
+                        <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="orcamento_hospedagem.html">Orçamento de hospedagem</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="rodape__base">© 2026 Cada Real · Projeto A2 de Desenvolvimento Front-end para Web (UNICID) ·
+                Equipe Bolso Coletivo.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
