@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/estilo.css">
     <script src="js/menu.js" defer></script>
     <script src="js/simuladores.js" defer></script>
+    <script src="js/noticias.js" defer></script>
 </head>
 
 <body>
@@ -36,6 +37,7 @@
                         <li><a href="guia.html">Guia</a></li>
                         <li><a href="simuladores.html">Simuladores</a></li>
                         <li><a href="dados.html">Dados</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
                         <li><a href="acessibilidade.html">Acessibilidade</a></li>
                         <li><a href="sobre.html">Sobre</a></li>
                 </ul>
@@ -129,7 +131,18 @@
             </div>
         </section>
 
-        <section class="secao" aria-labelledby="t-passos">
+        <section class="secao" aria-labelledby="t-ultimas">
+            <div class="contem">
+                <div class="secao__cabeca">
+                    <span class="sobretitulo">Atualizado todo dia</span>
+                    <h2 id="t-ultimas">Últimas notícias sobre o seu bolso</h2>
+                </div>
+                <ul class="noticias-lista noticias-lista--resumo" id="ultimas-noticias" data-limite="4"></ul>
+                <p><a class="botao botao--azul" href="noticias.html">Ver todas as notícias</a></p>
+            </div>
+        </section>
+
+        <section class="secao secao--suave" aria-labelledby="t-passos">
             <div class="contem">
                 <div class="secao__cabeca">
                     <span class="sobretitulo">Por onde começar</span>
@@ -215,6 +228,7 @@
                         <li><a href="guia.html">Guia prático</a></li>
                         <li><a href="simuladores.html">Simuladores</a></li>
                         <li><a href="dados.html">Dados e fontes</a></li>
+                        <li><a href="noticias.html">Notícias do dia</a></li>
                     </ul>
                 </div>
                 <div>
