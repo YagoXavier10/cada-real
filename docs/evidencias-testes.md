@@ -20,7 +20,6 @@ Validador oficial: https://validator.w3.org/nu/ (envio do arquivo).
 | midia.html | 0 | 0 |
 | noticias.html | 0 | 0 |
 | contato.html | 0 | 0 |
-| orcamento_hospedagem.html | 0 | 0 |
 | tema.html · aprofundamento.html · simuladores.html | 0 | 0 |
 | css/estilo.css | 0 | 0 |
 
@@ -28,8 +27,8 @@ Validador oficial: https://validator.w3.org/nu/ (envio do arquivo).
 
 - Script de conferência percorreu todas as páginas: **nenhum link interno quebrado**, nenhuma âncora
   (`#`) inexistente e nenhum arquivo de imagem, vídeo, áudio, CSS ou JS faltando.
-- Menu com as 10 páginas obrigatórias em todas as páginas, com a página atual marcada
-  (`aria-current="page"`); rodapé com links para todas as 13 páginas.
+- Menu com as páginas principais em todas as páginas, com a página atual marcada
+  (`aria-current="page"`); rodapé com links para todas as 12 páginas.
 - Menu do celular abre e fecha pelo botão e fecha com a tecla Esc.
 
 ## 3. Formulário de contato
@@ -59,7 +58,7 @@ Todos os campos têm `<label for>` ligado ao `id` e textos de ajuda com `aria-de
 ## 5. Responsividade
 
 - Testado em 360 px (celular), 800 px (tablet) e 1280 px (desktop).
-- Em 360 px, nenhuma das 10 páginas tem rolagem horizontal; tabelas largas rolam dentro do próprio
+- Em 360 px, nenhuma das páginas tem rolagem horizontal; tabelas largas rolam dentro do próprio
   quadro.
 - Menu horizontal a partir de 1200 px; abaixo disso, botão "Menu".
 

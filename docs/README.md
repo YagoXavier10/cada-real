@@ -36,7 +36,7 @@ da pobreza), 10 (Redução das desigualdades) e 12 (Consumo e produção respons
 | 7 | `midia.html` | `<video controls poster>` com legendas, `<audio controls>` e `<iframe>` |
 | 8 | `noticias.html` | Notícias do dia, atualizadas automaticamente |
 | 9 | `contato.html` | Dados fictícios, formulário validado e membros da equipe |
-| 10 | `orcamento_hospedagem.html` | Comparativo de 3 hospedagens e 3 domínios com justificativa |
+| 10 | `orcamento_hospedagem.html` | *Retirada do site por enquanto; o orçamento está em [`orcamento-hospedagem.md`](orcamento-hospedagem.md)* |
 | + | `tema.html`, `aprofundamento.html`, `simuladores.html` | Conteúdo educativo e ferramentas |
 
 ## Estrutura de pastas
@@ -44,7 +44,7 @@ da pobreza), 10 (Redução das desigualdades) e 12 (Consumo e produção respons
 ```
 cada-real/
 ├── index.html  sobre.html  projetos.html  impacto.html  acessibilidade.html
-├── galeria.html  midia.html  noticias.html  contato.html  orcamento_hospedagem.html
+├── galeria.html  midia.html  noticias.html  contato.html
 ├── tema.html  aprofundamento.html  simuladores.html
 ├── css/        estilo.css
 ├── js/         menu, carrossel, simuladores, barras, notícias, contato

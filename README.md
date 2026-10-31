@@ -27,7 +27,6 @@ e preços — num site leve, acessível e sem anúncios.
 | 📰 | [Notícias do dia](https://yagoxavier10.github.io/cada-real/noticias.html) | Manchetes de finanças pessoais, atualizadas toda manhã |
 | ♿ | [Acessibilidade](https://yagoxavier10.github.io/cada-real/acessibilidade.html) | Recursos do site e direitos |
 | ✉️ | [Contato](https://yagoxavier10.github.io/cada-real/contato.html) | Formulário validado e dados de atendimento |
-| 💸 | [Orçamento](https://yagoxavier10.github.io/cada-real/orcamento_hospedagem.html) | Comparativo de hospedagem e domínio |
 | 📖 | [O tema](https://yagoxavier10.github.io/cada-real/tema.html) · [Aprofundamento](https://yagoxavier10.github.io/cada-real/aprofundamento.html) · [Simuladores](https://yagoxavier10.github.io/cada-real/simuladores.html) | Conteúdo educativo e ferramentas |
 
 A documentação da Atividade A2 (escopo, diário de bordo, orçamento e evidências de testes) está em

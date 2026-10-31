@@ -1,7 +1,7 @@
 # Orçamento de hospedagem e domínio
 
-Versão em documento do relatório publicado em
-[`orcamento_hospedagem.html`](https://yagoxavier10.github.io/cada-real/orcamento_hospedagem.html).
+Relatório comparativo de hospedagem e domínio. A página `orcamento_hospedagem.html` foi retirada do
+site por enquanto e pode voltar a partir do histórico do Git.
 
 > Valores consultados em 31/10/2026. Planos pagos têm preço promocional no primeiro ciclo e renovação
 > mais cara. Confirme no site de cada empresa antes de contratar.
