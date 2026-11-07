@@ -16,8 +16,8 @@
   --linha:       #C7E6F4;
 
   --fonte: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
-  --largura: 1120px;
-  --leitura: 68ch;
+  --largura: 1280px;
+  --leitura: 72ch;
   --raio: 14px;
   --raio-p: 8px;
   --sombra: 0 10px 30px rgba(0, 59, 92, .12);
@@ -444,6 +444,16 @@ tbody tr:hover { background: var(--azul-suave); }
   .cartoes { grid-template-columns: repeat(2, 1fr); }
   .campos--duplo { grid-template-columns: 1fr 1fr; }
   .rodape__grade { grid-template-columns: repeat(2, 1fr); }
+
+  /* Telas largas: o conteúdo usa a largura da página, alinhado ao título.
+     Só o texto corrido fica limitado em --leitura para manter a legibilidade;
+     tabelas e grades de cartões ocupam a largura toda. */
+  .leitura { max-width: none; }
+  .contem.leitura { max-width: var(--largura); }
+  .leitura :is(h2, h3, p, ol, ul:not([class]), .glossario, .destaque-caixa, .transcricao, .audio) { max-width: var(--leitura); }
+  .leitura .figura figcaption { max-width: var(--leitura); }
+  .leitura :is(.video, .figura, .barras) { max-width: 960px; }
+  .leitura h2.noticias-dia { max-width: none; }
 }
 
 @media (min-width: 900px) {
@@ -461,10 +471,16 @@ tbody tr:hover { background: var(--azul-suave); }
   .materias { grid-template-columns: repeat(2, 1fr); }
   .chamada-simulador { grid-template-columns: 1fr 1fr; gap: 56px; }
   .slide__interno { padding: 64px 72px 72px; }
-  .guia-grade { grid-template-columns: 240px 1fr; gap: 56px; }
+  .guia-grade { grid-template-columns: 260px minmax(0, 1fr); gap: 64px; }
   .sumario { position: sticky; top: 88px; }
   .rodape__grade { grid-template-columns: 2fr 1fr 1fr; }
+  .fontes { grid-template-columns: repeat(2, 1fr); }
+}
 
+@media (min-width: 1200px) {
+  :root { --leitura: 50rem; }
+  .materias { grid-template-columns: repeat(3, 1fr); }
+  .leitura .noticias-lista { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (min-width: 640px) and (max-width: 1199px) {
