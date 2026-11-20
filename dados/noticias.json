@@ -1,6 +1,55 @@
 {
- "atualizado": "2026-11-19T18:51:04Z",
+ "atualizado": "2026-11-20T18:17:57Z",
  "noticias": [
+  {
+   "titulo": "Um salário mínimo compra 23 kg de acém a menos do que em 2007; entenda o preço da carne",
+   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/20/um-salario-minimo-compra-23-kg-de-acem-a-menos-do-que-em-2007-entenda-o-preco-da-carne.ghtml",
+   "fonte": "g1",
+   "data": "2026-11-20T06:00:22Z",
+   "tema": "Renda e benefícios"
+  },
+  {
+   "titulo": "Dívidas viraram uma bola de neve? Entenda os riscos da inadimplência e como sair dela",
+   "link": "https://g1.globo.com/g1-explica/noticia/2026/11/20/dividas-viraram-uma-bola-de-neve-entenda-os-riscos-da-inadimplencia-e-como-sair-dela.ghtml",
+   "fonte": "g1",
+   "data": "2026-11-20T05:00:00Z",
+   "tema": "Dívidas e crédito"
+  },
+  {
+   "titulo": "Bancos esperam crédito restrito e alta da inadimplência em 2026",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQLVRWYWxuVlM3YWJaU1RPRWNQRHhicXV4QWotZlVnMTVwa0VCM1BpUjFUWmNweF9MZ3I3WFJrNk80MzJmUUtMQkFCU2h3WGtHdHo2SjZNczR2b0tkbU4ySG5JMWlXQ1RGallhb3NUS1hKSHlMQkI4dnFJVW5kSUZ4Nk5ENXVIZm5vZndCQ0tRZEMwTGhDQ0xQTFJIaURNYXNKdkxFTGNsSmZTMDg?oc=5",
+   "fonte": "Poder360",
+   "data": "2026-11-19T20:33:51Z",
+   "tema": "Dívidas e crédito"
+  },
+  {
+   "titulo": "Reincidência na inadimplência bate recorde e chega a 88,26%",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWHRaUVFBcjVTdXY3VHFnV2FqWlQwb1NqRDVYS0JnSEplUmxOSVNwdHduMk56RlZkMUFKdTQyQUh0b19TTHp5NFd0d1pzQ1JNWVU1UjhpRVZBc3IxUHl2LXV2Qzg4MWx4SkRvZzNRN0lXU2dCN01PcUJrUElEZmNHYUg5X2REeGl0SFNZOEtrSWlHLTBhLWE4cnVvckNob3F6ekhV?oc=5",
+   "fonte": "Poder360",
+   "data": "2026-11-19T20:33:51Z",
+   "tema": "Dívidas e crédito"
+  },
+  {
+   "titulo": "Bancos restringem crédito ao consumidor mais do que esperavam",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQVE3TzNGbHNlYXdXYTR4OFVRelktT1hLS2JaSG5uVGwxTUtQMzhZdFMtb2toZWZrcm80b3FkUEJJWU9VeGoyVGVBMDVKTkh0ZzlMamJxMzRITmdwUmRsbUEtMk5OU3JtUzJEV3lkeXMyZGJ0a1BEN2VybzFweTMtMWNtc3gxdk1vRGp0LTdkNUhKZExfN21IOUdkd0NHWklyREZUeFBBN3I?oc=5",
+   "fonte": "Poder360",
+   "data": "2026-11-19T20:33:46Z",
+   "tema": "Dívidas e crédito"
+  },
+  {
+   "titulo": "BC: crédito fica mais restrito, com exceção do habitacional para PF",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQa2F5SXB1LW1zNG9GOVhFT2pVbkFIZzlxaDJaWm1PNG9TWExPZjJRb2JDNzY1cktXUG51TDQ3YU9SUE43VHNsOXhnTFJrSTVFZEdKbnYxLW94WllYcTg1eUtoRkdfX3Q2RVNZa3JNTjVEWV9hR0xPUUZURWNTeWlmVFdQOHFmc1VRdjluTVhKVUxPTXpuOU1PbGNLYWl1dnk3ejFXb3Q3T21ZczZwbHdmZXZERjN4VFlyYUtn?oc=5",
+   "fonte": "CNN Brasil",
+   "data": "2026-11-19T20:25:54Z",
+   "tema": "Dívidas e crédito"
+  },
+  {
+   "titulo": "BNDES injetou R$ 254 bi de crédito na economia de janeiro a setembro",
+   "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bndes-injetou-r-254-bi-de-credito-na-economia-de-janeiro-setembro",
+   "fonte": "Agência Brasil",
+   "data": "2026-11-19T19:24:00Z",
+   "tema": "Dívidas e crédito"
+  },
   {
    "titulo": "Juros disparam e Tesouro Direto suspende negociação de prefixados e IPCA+",
    "link": "https://www.infomoney.com.br/onde-investir/juros-disparam-e-tesouro-direto-suspende-negociacao-de-prefixados-e-ipca/",
@@ -510,55 +559,6 @@
    "link": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxOYVlab1pNNzlTYndja3ZJbXBlU0tJQWFsYTF6T2hZX1YyUkxuaGFfM2ZLOE1xMTZQZDhjN0VqOERJbU9EVnFVMzBFZHc1RDZLX2NNTUhrOEVRRDBld21Id3Jnd1B1V0VLaWNGMmpKamRIMG5zVGp3QmJIa20xWjdxLUJLTTBrMGMzYnFiRVVCd283R2t3NTBXWkFpUGFyZWlMS0hRbjJqa1NtQkhtOE4tYzVCbEtnbHJJeVlJNnVnelFOZTBqWDJBZzZSd1p0dmE2R2Z2QnpsMTM4b1dNZldwTS10Y1V0UnZ6TTJ0SjFtWUhVdXZQUEx0UVk3eGxWRjFQT0d1VmZoYVFwRkVTU1VDX2VuZ3V4Q1ZZdjhocHdLdUF3QXpBLVlWSTdyQQ?oc=5",
    "fonte": "GZH",
    "data": "2026-11-12T21:57:57Z",
-   "tema": "Dívidas e crédito"
-  },
-  {
-   "titulo": "Banco do Brasil enfrenta crise inédita de inadimplência no agronegócio em 2026",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVWFPRTQtOTE0TkhfaDJoVm54RXRnNmVkVFMyNTJ3aGcyalVIX25SeGViUzBtMV94MXdRN2JERHVCY1Y1R2pjNlRGazJRdXAyVnN1YjNOdDZiMkxudnNZaHk1TEZqdmJEeVZXY3R6YjZpUHVvTllRN1NOSXFoaFd2T3hEWVdLejE2Y01hZnFXcTBwdEx3TFZmMHVQQ2w5OXdWcjJRcEdhSldHVW5EbFpXcVRfMWhMdw?oc=5",
-   "fonte": "Gazeta do Povo",
-   "data": "2026-11-12T21:17:00Z",
-   "tema": "Dívidas e crédito"
-  },
-  {
-   "titulo": "Produtores de soja rebatem Banco do Brasil sobre dívidas do agro; estatal nega ter culpado todo o setor",
-   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/12/nota-aprosoja.ghtml",
-   "fonte": "g1",
-   "data": "2026-11-12T20:40:36Z",
-   "tema": "Dívidas e crédito"
-  },
-  {
-   "titulo": "BB aponta recusa de parte dos produtores em renegociar dívidas do agro",
-   "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bb-aponta-recusa-de-parte-dos-produtores-em-renegociar-dividas-do-agro",
-   "fonte": "Agência Brasil",
-   "data": "2026-11-12T20:33:00Z",
-   "tema": "Dívidas e crédito"
-  },
-  {
-   "titulo": "Provisão dos “bancões” para inadimplência bate recorde",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOQ0FQU0ZlTUpLcHZuSjQ4eExaNC1TUW15REFoYXdGNXlMR0tleVpaclRyYlVkU0RiRlpLenh3MTc0Y2RROVYyU0ZwWDBiSzgxeml2VVJZTE8yVGtwdFhKc3NMRXNvMWh3YmxSd3lyVzNsbGFVZ1hBOGZINjFULTczTGJHOElJNDhmc1RBa3MwNzlfVDB4aTBHUU1Nc08?oc=5",
-   "fonte": "Poder360",
-   "data": "2026-11-12T20:07:20Z",
-   "tema": "Dívidas e crédito"
-  },
-  {
-   "titulo": "Em resposta ao BB, agro diz que inadimplência não é deliberada",
-   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPY0FRVngycWdyci03aHFqZmEwM2VtRG5ORlhGbHJpdldYRTE5ZkFDQ2pwcVZiQVlDeG1Ncmtpd1BCQlNpZWY3WkRuUk9UYXZvS1Iwb0ZWS1JLeUozT0ZHdVdXT2ZCanBfUUNoZTRHQmZIU2NrTTdJOG1acTRxRGFNLV8zUl9HZGFJ?oc=5",
-   "fonte": "Gazeta do Povo",
-   "data": "2026-11-12T19:31:00Z",
-   "tema": "Dívidas e crédito"
-  },
-  {
-   "titulo": "BB vê risco com inadimplência do agro e atribui ao setor piora de resultado",
-   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQXBxdk94ZE9Ra1NqSkZaNmo5VVRrcERiS254b2lEVXlRMlFRVDJLaldWeGliOU1TbTBfWEZGRWxHS1NWbi0wSnM3TE1EM280S0JpZ0IwLUR4WjlOdnZFTFBHVUg4RVo3Y3NRazhNMW9FT0hEVHRoZnZlNjVhbWlTT1kydjNqelpDLXVVLW1IbjNub3JqeERONEtESlZQbzNYbkpQUVh3cEY1WHZXczRz?oc=5",
-   "fonte": "CNN Brasil",
-   "data": "2026-11-12T19:21:36Z",
-   "tema": "Dívidas e crédito"
-  },
-  {
-   "titulo": "Agro acumula safras recordes enquanto inadimplência explode",
-   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQc3RFUG43TFY0WmJsWERkRE9rN1pqeXFSclNuMlpHY2hESExxVXVNb1ltaHNaVGp6Yk9lVFhZdV8zdUZvV25yWHlJSDctUzdNU2p3RE5VM2F4MG1kV21nMDdBZGZCc1lEOWw4ME1ZQ09sMC1vWnFCOEE4YTI1cjM5M3JySGtoTlBwa0k1S2pBeHZSVzN4aEFfV0FYQU80MDdsU0NmTkNBTkVsWDVmNElJMEFDVEo?oc=5",
-   "fonte": "Metrópoles",
-   "data": "2026-11-12T19:00:00Z",
    "tema": "Dívidas e crédito"
   }
  ]
